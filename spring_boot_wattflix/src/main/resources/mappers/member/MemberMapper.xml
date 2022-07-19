@@ -4,9 +4,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- <!—- 주의! 이거 같이 꼭 넣어주기 -—> -->
-  <mapper namespace="com.spring_boot_wattflix.project.dao.IMemberDAO">
-  <!-- Resultmap 작성할 것 -->
+  	<mapper namespace="com.spring_boot_wattflix.project.dao.IMemberDAO">
+  	<!-- Resultmap 작성할 것 -->
   
   	<!-- 회원 가입  -->
 	<insert id="signUp" parameterType="com.spring_boot_wattflix.project.model.MemberVO">
