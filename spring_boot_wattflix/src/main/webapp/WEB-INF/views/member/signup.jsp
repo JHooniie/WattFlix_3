@@ -9,13 +9,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="minimum-scale=10">
         <title>WattFlix</title>
-        <link rel="stylesheet" href="<c:url value='css/common.css'/>">
-        <link rel="stylesheet" href="<c:url value='css/index.css'/>">
-        <link rel="stylesheet" href="<c:url value='css/signup.css'/>">
-        <script src="<c:url value='js/jquery-3.6.0.min.js'/>"></script>
-        <!-- <script src="../jsCustom/common.js"></script> -->
-        <script src="<c:url value='jsCustom/index.js'/>"></script>
-        <script src="<c:url value='jsCustom/signup.js'/>"></script>
+        <link rel="stylesheet" href="<c:url value='/css/common.css'/>">
+        <link rel="stylesheet" href="<c:url value='/css/index.css'/>">
+        <link rel="stylesheet" href="<c:url value='/css/signup.css'/>">
+        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+        <script src="<c:url value='/jsCustom/index.js'/>"></script>
+        <script src="<c:url value='/jsCustom/signup.js'/>"></script>
         
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v14.0" nonce="rIi6gLaE"></script>
     
@@ -45,7 +44,7 @@
                         <span style="font-weight: 700;">이메일로 가입하기</span>
                     </div> 
                     <br>
-                    <form id="signup-form" name="signup-form" method="post" action="<c:url vlue='joined.html'/>">
+                    <form id="signup-form" name="signup-form" method="post" action="<c:url value='/member/signUp'/>">
                          <div id="signup-content">
                             <!-- MAIL -->
                             <label for="userId">이메일</label>
@@ -136,7 +135,8 @@
                             <div class="signup-footer">
                                 <button class="greenBtn" id="submitBtn" name="submitBtn" type="submit">가입하기</button>
                             </div>
-                        </form>
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>
