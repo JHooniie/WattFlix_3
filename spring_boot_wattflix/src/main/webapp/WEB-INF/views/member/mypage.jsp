@@ -1,15 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="<c:url value='css/mypage.css'/>">
-<link rel="stylesheet" href="<c:url value='css/mypage_index.css'/>">
+<link rel="stylesheet" href="<c:url value='/css/mypage.css'/>">
+<link rel="stylesheet" href="<c:url value='/css/main.css'/>">
 
-<script src="<c:url value='jsCustom/mypage_index.js'/>" defer></script>
-<script src="https://kit.fontawesome.com/50d21a2bed.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/50d21a2bed.js"
+	crossorigin="anonymous"></script>
 
 <!-- 부트스트랩 -->
 
@@ -34,18 +40,13 @@
 
 		<div class="container">
 
-			<div class="nav-menu-icon" id="nav-menu-icon">
-				<i class="fa-solid fa-bars fa-lg"></i>
-			</div>
-
-
 			<!-- navbar -->
 			<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
 
 			<div class="mypage_box">
 
-				<section class="mypage_pofile">
+				<div class="mypage_pofile">
 
 					<div class="profile">
 
@@ -57,7 +58,7 @@
 						</div>
 
 						<div class="card-body">
-							<h5 class="card-title">`${username}`님, 안녕하세요!</h5>
+							<h5 class="card-title">○○님, 안녕하세요!</h5>
 							<hr>
 							<p class="card-text">등록된 프로필이 없습니다.</p>
 							<button type="submit" class="btn btn-dark" id="profile_button">프로필
@@ -83,24 +84,18 @@
 							</a>
 						</div>
 
-						<div id="profile_box_a">
-							<a href="index.html" class="a_item"> <span class="link-text">평가</span>
-								<i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-							</a>
-
-
-						</div>
 
 					</div>
-
-				</section>
+				</div>
 
 			</div>
 
-
-
 		</div>
-		<!-- 컨테이너 끝 -->
+
+
+
+	</div>
+	<!-- 컨테이너 끝 -->
 
 
 	</div>

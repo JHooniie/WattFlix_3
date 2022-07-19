@@ -10,8 +10,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WatFlix</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
         <link rel="stylesheet" type="text/css" href="<c:url value='/css/detailpage.css'/>"> 
-        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+
         <script src="<c:url value='/jsCustom/stillcut.js'/>"></script> 
         <script src="https://kit.fontawesome.com/50d21a2bed.js" crossorigin="anonymous"></script>
     </head>
