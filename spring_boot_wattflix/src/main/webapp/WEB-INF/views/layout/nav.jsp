@@ -9,11 +9,10 @@
 		<title>WatFlix</title>
 		
 		<link rel="stylesheet" href="<c:url value='/css/common.css'/>">
-		<link rel="stylesheet" href="<c:url value='/css/mypage_index.css'/>">
+		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
 
 		<!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> -->
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
 
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/jsCustom/index.js'/>"></script>
