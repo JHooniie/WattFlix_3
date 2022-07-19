@@ -10,10 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WatFlix</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet" type="text/css" href="<c:url value='css/detailpage.css'/>"> 
-        <script src="<c:url value='jsCustom/stillcut.js'/>"></script> 
+        <link rel="stylesheet" type="text/css" href="<c:url value='/css/detailpage.css'/>"> 
+        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+        <script src="<c:url value='/jsCustom/stillcut.js'/>"></script> 
         <script src="https://kit.fontawesome.com/50d21a2bed.js" crossorigin="anonymous"></script>
-    
     </head>
 
 <body>
@@ -24,9 +24,7 @@
     <main>
 
         <div id="wrap">
-            <br>
-            <br>
-            <br>
+            <br><br><br>
             
             <div id="information">
                 <div id="infoBox1">
@@ -46,10 +44,7 @@
                 </div>
             </div>
 
-            <br>
-            <br>
-            <br>
-  
+            <br><br><br>
 
             <div id="story">
                 <div id="storyBox">
@@ -61,16 +56,10 @@
                         매버릭의 지휘아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자<br>
                         매버릭은 자신이 가르친 동료들과 함께 마지막이 될 지 모를 하늘 위 비행에 나서는데…
                     </p>
-
                 </div>
             </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+            <br><br><br><br>
 
             <div id="trailer">
                 <div id="trailerName">
@@ -92,7 +81,6 @@
                 </div>
             </div>
 
-
             <div id="stillcut">
                 <div id="prevNextButtonBox">
                     <img id="prevButton" src="../image/prevButton.png">
@@ -112,22 +100,24 @@
                             class="stillCutImg">
                     </div>
                 </div>
-
-            </div>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <div id="nextmovie">
-                <div id="nextImg">
-                    <a href="detailpage2.html" target="_blank"><img id="movieImg" src="https://file.cineq.co.kr/j.aspx?guid=12a1564fff6644379a52b603ed5f85d0"></a>
-                </div>
             </div>
 
             <br><br><br>
+
+            <div id="recommendation">
+                <div id="ment">
+                    <h3>비슷한 콘텐츠</h3>
+                </div>
+                <div id="recomBox">
+                    <div><a href="<c:url value='/movie/detailpage2'/>" target="_blank">
+                        <img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000078/78540/78540_1000.jpg"></a></div>
+                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000076/76417/76417_1000.jpg"></div>
+                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000080/80789/80789_1000.jpg"></div>
+                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85813/85813_1000.jpg"></div>
+                </div>
+            </div>
+
+            <br><br><br><br>
 
             <div id="comment">
                 <div id="commentName">
@@ -135,27 +125,20 @@
                 </div>
                 <div id="commentBox">
                     <div id="inputBox">
-                        <input type="text" id="commentDetail" name="commentDetail" size="100" placeholder="  탑건: 매버릭   재미있게 보셨나요? 영화에 대해 이야기 나눠요!">
+                        <input type="text" id="commentDetail" name="commentDetail" size="100" placeholder="  이 작품에 대한 생각을 자유롭게 표현해주세요.">
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div id="buttonBox">
-                        <button type="button" id="commentBtn"><img src="https://cutewallpaper.org/24/youtube-comment-png/logo-comment-button-youtube-png-ferretfurriesandotherthingies.png"></button>
+                        <button id="commentBtn" name="commentBtn">comment</button>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+            <br><br><br><br><br>
 
         </div>
 
-
     </main>
-
 
 
 </body>
