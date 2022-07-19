@@ -6,7 +6,7 @@ import com.spring_boot_wattflix.project.model.MemberVO;
 
 public interface IMemberService {
 	// 회원가입
-	public void signUp (MemberVO mem);
+	public void insertMember (MemberVO memVo);
 	String memIdCheck (String memId);
 	
 	// 로그인
@@ -17,5 +17,4 @@ public interface IMemberService {
 	
 	// 회원 탈퇴
 	public void dropMember (String memNo);
-
 }

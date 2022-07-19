@@ -8,13 +8,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WatFlix</title>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../jsCustom/index.js"></script>
-    <script src="https://kit.fontawesome.com/50d21a2bed.js" crossorigin="anonymous"></script>
     
     <!-- custom link -->
     <link rel="stylesheet" href="../css/posterbook.css">

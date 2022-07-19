@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="minimum-scale=10">
-        <title>WatFlix</title>
+        <title>WattFlix</title>
         <link rel="stylesheet" href="<c:url value='css/common.css'/>">
         <link rel="stylesheet" href="<c:url value='css/index.css'/>">
         <link rel="stylesheet" href="<c:url value='css/signup.css'/>">
@@ -16,6 +16,7 @@
         <!-- <script src="../jsCustom/common.js"></script> -->
         <script src="<c:url value='jsCustom/index.js'/>"></script>
         <script src="<c:url value='jsCustom/signup.js'/>"></script>
+        
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v14.0" nonce="rIi6gLaE"></script>
     
     </head>
@@ -48,23 +49,23 @@
                          <div id="signup-content">
                             <!-- MAIL -->
                             <label for="userId">이메일</label>
-                            <input class="signup-input" type="text" id="userId" name="userId" placeholder="이메일을 입력하세요."><br>
+                            <input class="signup-input" type="text" id="memId" name="memId" placeholder="이메일을 입력하세요."><br>
                             <span class="error"></span>
                             <!-- MAIL CHECK -->
                             <label for="userIdCheck">이메일 확인</label>
-                            <input class="signup-input" type="text" id="userIdCheck" name="userIdCheck" placeholder="이메일을 다시 입력하세요."><br>
+                            <input class="signup-input" type="text" id="memIdCheck" name="memIdCheck" placeholder="이메일을 다시 입력하세요."><br>
                             <!-- <span class="guide_ui"></span> -->
                             <br>
                             <!-- PASSWORD -->
                             <label for="userPwd">비밀번호</label>
-                            <input class="signup-input" type="password" name="userPwd" id="userPwd" placeholder="영문, 숫자 특문 중 2개 조합 10자 이상"><br>
+                            <input class="signup-input" type="password" name="memPwd" id="memPwd" placeholder="영문, 숫자 특문 중 2개 조합 10자 이상"><br>
                             <!-- PASSWORD CHECK -->
                             <label for="userPwdCheck">비밀번호 확인</label>
-                            <input class="signup-input" type="password" name="userPwdCheck" id="userPwdCheck" placeholder="비밀번호를 만드세요."><br>
+                            <input class="signup-input" type="password" name="memPwdCheck" id="memPwdCheck" placeholder="비밀번호를 만드세요."><br>
                             <br>
                             <!-- USERNAME -->
                             <label for="userName">사용자 이름</label>
-                            <input class="signup-input" type="text" name="userName" id="userName" placeholder="프로필에 표시되는 이름"><br>
+                            <input class="signup-input" type="text" name="memNickname" id="memNickname" placeholder="프로필에 표시되는 이름"><br>
                             <!-- 생년월일 Start -->
                             <label for="yy">생년월일</label><br>
                             <div class="bday-wrap">
@@ -94,24 +95,24 @@
                             <select class="signup-input" id="hp_nationalNum" name="hp_nationalNum">
                                 <option value="82">대한민국 +82</option>
                             </select>
-                            <input class="signup-input" type="text" id="userHp" name="userHp" placeholder="전화번호 입력">
-                            <button class="whiteBtn" id="userHpCheckBtn" name="userHpCheckBtn" onclick="hpCheck()">인증받기</button>
-                            <input class="signup-input" type="text" id="userHpCheck" name="userHpCheck" placeholder="인증번호 입력하세요.">
+                            <input class="signup-input" type="text" id="memHp" name="memHp" placeholder="전화번호 입력">
+                            <button class="whiteBtn" id="memHpCheckBtn" name="memHpCheckBtn" onclick="hpCheck()">인증받기</button>
+                            <input class="signup-input" type="text" id="memHpCheck" name="memHpCheck" placeholder="인증번호 입력하세요.">
                         </div>
                         <br>
                         <label>관심 분야</label>
                             <table class="signup-input">
                                 <tr>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-comedy" value="comedy"></td><td><label class="chkLabel" for="gr-comedy">코미디</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-action" value="action"></td><td><label class="chkLabel" for="gr-action">액션</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-history" value="history"></td><td><label class="chkLabel" for="gr-history">전쟁/역사</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-horror" value="horror"></td><td><label class="chkLabel" for="gr-horror">공포</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-comedy" value="comedy"></td><td><label class="chkLabel" for="gr-comedy">코미디</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-action" value="action"></td><td><label class="chkLabel" for="gr-action">액션</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-history" value="history"></td><td><label class="chkLabel" for="gr-history">전쟁/역사</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-horror" value="horror"></td><td><label class="chkLabel" for="gr-horror">공포</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-romentic" value="romentic"></td><td><label class="chkLabel" for="gr-romentic">로맨틱</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-mystery" value="mystery"></td><td><label class="chkLabel" for="gr-mystery">미스터리</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-adventure" value="adventure"></td><td><label class="chkLabel" for="gr-adventure">모험</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="genre" id="gr-sfFantagy" value="sfFantagy"></td><td><label class="chkLabel" for="gr-sfFantagy">SF/판타지</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-romentic" value="romentic"></td><td><label class="chkLabel" for="gr-romentic">로맨틱</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-mystery" value="mystery"></td><td><label class="chkLabel" for="gr-mystery">미스터리</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-adventure" value="adventure"></td><td><label class="chkLabel" for="gr-adventure">모험</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-sfFantagy" value="sfFantagy"></td><td><label class="chkLabel" for="gr-sfFantagy">SF/판타지</label></td>
                                 </tr>
                             </table>
                             <br>
