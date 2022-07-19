@@ -6,12 +6,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>WatFlix</title>
+		<title>WattFlix</title>
 		
 		<link rel="stylesheet" href="<c:url value='/css/common.css'/>">
 		<link rel="stylesheet" href="<c:url value='/css/mypage_index.css'/>">
-
-		<!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> -->
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
 
@@ -28,17 +26,6 @@
 		<nav id="nav-tab">
 			
 			<div class="nav-outter">
-	
-				<div class="nav-icon">
-					<a href="<c:url value='/'/>" class="icon-item"> <span
-						class="mainLogo">WattFlix</span>
-					</a>
-	
-					<div class="nav-menu-icon-x" id="nav-menu-icon-x">
-						<i class="fa-solid fa-xmark fa-lg"></i>
-					</div>
-	
-				</div>
 	
 				<div class="nav-menu">
 					<!-- search -->
@@ -73,33 +60,6 @@
 						<a href="<c:url value='/ent/chatView'/>" class="nav-item">
 							<i class="fa-solid fa-comments fa-lg"></i> <span
 							class="link-text">Chat</span>
-						</a>
-					</div>
-				</div>
-	
-				<div class="nav-member">
-					<!-- login -->
-					<div class="nav-contents">
-						<a onclick="login_dropdown()" class="member-item">
-							<i class="fa-solid fa-right-to-bracket fa-lg"></i> <span
-							class="link-text">Login</span>
-						</a>
-						<div id="login-div">
-							<form id="loginForm" name="loginForm" method="post" action="<c:url value='/member/login'/>">
-								<div id="input-div">
-									<input type="text" placeholder="Email" id="memId" name="memId">
-									<input type="password" placeholder="Password" id="memPwd" name="memPwd">
-								</div>
-								<button id="input-btn" type="submit">
-									<span>Login</span>
-								</button>
-							</form>
-						</div>
-					</div>
-					<div class="nav-contents">
-						<a href="<c:url value='/member/signupFormView'/>" class="member-item">
-							<i class="fa-solid fa-user-plus fa-lg"></i> <span
-							class="link-text">Sign up</span>
 						</a>
 					</div>
 				</div>
