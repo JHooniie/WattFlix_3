@@ -21,11 +21,11 @@ public class MemberController {
 	@Autowired
 	MemberService memService;
 
-	// 회원가입 폼 열기 요청 처리
-	@RequestMapping("/member/signUpForm")
-	public String viewSignUp() {
-		return "member/signup";
-	}
+//	// 회원가입 폼 열기 요청 처리
+//	@RequestMapping("/member/signUpForm")
+//	public String viewSignUp() {
+//		return "member/signup";
+//	}
 
 	// 회원가입
 	@RequestMapping("/member/signUp")
