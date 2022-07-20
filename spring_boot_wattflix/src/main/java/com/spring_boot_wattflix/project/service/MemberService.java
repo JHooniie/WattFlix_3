@@ -23,8 +23,8 @@ public class MemberService implements IMemberService {
 	}
 
 	@Override
-	public void dropMember(String memNo) {
-		// TODO Auto-generated method stub
+	public void deleteMember(String memId) {
+		dao.deleteMember(memId);
 
 	}
 
