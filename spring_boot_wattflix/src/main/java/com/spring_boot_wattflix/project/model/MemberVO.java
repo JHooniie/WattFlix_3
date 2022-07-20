@@ -5,7 +5,6 @@ import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class MemberVO {
-	private String memNo;
 	private String memId;
 	private String memPwd;
 	private String memNickname;
@@ -17,12 +16,6 @@ public class MemberVO {
 	private String memAddress2;
 	private String memGenre;
 	
-	public String getMemNo() {
-		return memNo;
-	}
-	public void setMemNo(String memNo) {
-		this.memNo = memNo;
-	}
 	public String getMemId() {
 		return memId;
 	}
@@ -78,19 +71,4 @@ public class MemberVO {
 		this.memGenre = memGenre;
 	}
 	
-	
-	public MemberVO(String memNo, String memId, String memPwd, String memNickname, Date memBirth, String memHp,
-			String memZipcode, String memAddress1, String memAddress2, String memGenre) {
-		this.memNo = memNo;
-		this.memId = memId;
-		this.memPwd = memPwd;
-		this.memNickname = memNickname;
-		this.memBirth = memBirth;
-		this.memHp = memHp;
-		this.memZipcode = memZipcode;
-		this.memAddress1 = memAddress1;
-		this.memAddress2 = memAddress2;
-		this.memGenre = memGenre;
-	}
-
 }
