@@ -29,5 +29,11 @@
   	<select id="detailViewMovie" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
   		SELECT * FROM movie WHERE movieNo=#{movieNo}
  	</select>
+ 	
+ 	<select id="getMovieInfo" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
+ 	SELECT *
+ 	FROM movie
+ 	WHERE movieNo = #{movieNo}
+ 	</select>
   
   </mapper>

@@ -11,5 +11,4 @@ public interface IMovieDAO {
 	
 	// test 전체 조회
 	public ArrayList<MovieVO> listAllMovie();
-
 }
