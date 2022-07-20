@@ -58,6 +58,6 @@ public class MemberController {
 		// 세션 무효화
 		session.invalidate();
 		
-		return "index";
+		return "redirect:/";
 	}
 }
