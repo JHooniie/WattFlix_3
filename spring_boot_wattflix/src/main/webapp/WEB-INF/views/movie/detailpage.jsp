@@ -102,7 +102,12 @@
                 </div>
                 <div id="recomBox">
                 	<c:forEach items="${movieList }" var="movieList">
-                		<div><img class="poster" src="<c:url value='${movieList.moviePoster }'/>"></div>&nbsp;&nbsp;
+                		<c:if test="${movieList.moviePoster ne movie.moviePoster }">
+                			<div>
+	                			<a href="<c:url value='/movie/detailMovie/${movieList.movieNo}'/>" target="_blank">
+	                			<img class="poster" src="<c:url value='${movieList.moviePoster }'/>"></a>
+                			</div>&nbsp;&nbsp;
+                		</c:if>
                 	</c:forEach>
                 </div>
             </div>
