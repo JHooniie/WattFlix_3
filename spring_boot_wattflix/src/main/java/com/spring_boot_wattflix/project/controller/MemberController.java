@@ -73,4 +73,10 @@ public class MemberController {
 		return "redirect:/";
 
 	}
+	// 회원 정보 수정 
+		@RequestMapping("member/update")
+		public String userupdate() {
+		
+			return "member/update";	
+		}
 }

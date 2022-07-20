@@ -1,0 +1,214 @@
+
+#wrap {
+    width:1280px;
+    margin: 0 auto;
+    min-width: 500px;
+    overflow: auto;
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #3c3c3c;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#wrap div {
+    /* border: red 1px solid; */
+}
+
+#information {
+    display: flex;
+    flex-direction: row;
+    margin: 55px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+#infoBox1 {
+    width: 30%;
+    display: flex;
+    margin-left: 80px;
+}
+
+#infoBox2 {
+    width: 70%;
+    margin: auto;
+    margin-left: 50px;
+}
+
+#mainposter {
+    /* width: 80%; */
+    width: 300px;
+    height: 500px;
+    height: auto;
+    border-radius: 15px;
+    margin-left: 50px;
+}
+
+#infoDetail {
+    height: 100%;
+    color: white;
+}
+
+
+#story {
+    color: white;
+}
+
+#storyBox {
+    margin-left: 130px;
+}
+
+
+#trailer {
+    margin: 80px;
+    border-radius: 20px;
+    border: 2px solid ivory;
+}
+
+#trailerName h3{
+    height: auto;
+    color: white;
+    margin: 0;
+    padding: 25px;
+}
+
+#trailerBox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#trailerBox div {
+    width: 33%;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 100%;
+}
+
+#trailerBox div iframe {
+    width: 100%;
+}
+
+
+#stillcut {
+    margin: 80px;
+}
+
+#stillcutBox {
+    width:880px;
+	overflow:hidden;
+    margin:  auto;
+}
+
+#slide {
+    position:relative;
+	width:4400px;
+}
+
+.stillCutImg {
+    float: left;
+	width:880px;
+    height: 600px;
+}
+
+
+#prevNextButtonBox { position:relative; z-index:10;}
+#prevButton {position:absolute; top:260px; left: 0.1%; opacity:0.8; cursor:pointer;}
+#nextButton {position:absolute; top:260px; right:0.1%; opacity:0.8; cursor:pointer;}
+
+#prevButton:hover {opacity:1;}
+#nextButton:hover {opacity:1;}
+
+#commentName {
+    margin-left: 50px;
+}
+
+#commentBox {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: row;
+}
+
+#commentDetail {
+    width: 1000px;
+    height: 45px;
+    border-radius: 20px;
+    padding-left: 12px;
+    
+    /* min-width: 200px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    line-height: 1.5px; */
+}
+
+#movieImg {
+    text-align: center;
+}
+
+#nextImg {
+    text-align: center;
+}
+
+
+#buttonBox {
+    /* width: 80px;
+    height: 45px;
+    border-radius: 10px; */
+    border-color: blue;
+}
+
+/* #commentBtn img {
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+} */
+
+#commentBtn {
+    border-radius: 500px;
+    width: 100px;
+    height: 45px;
+    margin: 5px; 
+    background-color: palevioletred;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#recommendation {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#ment h3 {
+    color: white;
+    margin: 0;
+    padding: 25px;
+}
+
+#recomBox {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 75%;
+}
+
+#recomBox div {
+    margin: 0 auto;
+}
+
+.poster {
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;
+    
+}
+
+
+
