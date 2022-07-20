@@ -153,7 +153,7 @@
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-romentic" value="romentic"></td><td><label class="chkLabel" for="gr-romentic">로맨틱</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-mystery" value="mystery"></td><td><label class="chkLabel" for="gr-mystery">미스터리</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-drama" value="drama"></td><td><label class="chkLabel" for="gr-drama">드라마</label></td>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-adventure" value="adventure"></td><td><label class="chkLabel" for="gr-adventure">모험</label></td>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-sfFantagy" value="sfFantagy"></td><td><label class="chkLabel" for="gr-sfFantagy">SF/판타지</label></td>
                                 </tr>

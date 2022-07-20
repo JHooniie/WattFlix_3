@@ -70,7 +70,8 @@ public class MemberController {
 		// 세션 무효화
 		session.invalidate();
 
-		return "index";
+		return "redirect:/";
+
 	}
 	// 회원 정보 수정 
 		@RequestMapping("member/update")

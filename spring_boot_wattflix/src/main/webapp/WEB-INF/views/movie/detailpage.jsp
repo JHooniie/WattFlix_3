@@ -52,7 +52,11 @@
             <div id="story">
                 <div id="storyBox">
                     <p>
-                        ${movie.movieDetail }
+                    <c:set var="movieDetail" value="${movie.movieDetail }"/>
+                    <c:set var="moStcList2" value="${fn:split(movieDetail,'<br>') }"/>
+                   	 <c:forEach var="mo" items="${moStcList2 }">
+                    	${mo }<br><br>
+                    </c:forEach>
                     </p>
                 </div>
             </div>
