@@ -8,9 +8,9 @@
   	<!-- Resultmap 작성할 것 -->
   
   	<!-- 회원 가입  -->
-	<insert id="signUp" parameterType="com.spring_boot_wattflix.project.model.MemberVO">
-		INSERT member (memNo, memId, memPwd, memNickname, memBirth, memHp, memZipcode, memAddress1, memAddress2, memGenre)
-		VALUES(#{memNo}, #{memId}, #{memPwd}, #{memNickname}, #{memBirth}, #{memHp}, #{memZipcode}, #{memAddress1}, #{memAddress2}, #{memGenre})
+	<insert id="insertMember" parameterType="com.spring_boot_wattflix.project.model.MemberVO">
+		INSERT member (memId, memPwd, memNickname, memBirth, memHp, memZipcode, memAddress1, memAddress2, memGenre)
+		VALUES(#{memId}, #{memPwd}, #{memNickname}, #{memBirth}, #{memHp}, #{memZipcode}, #{memAddress1}, #{memAddress2}, #{memGenre})
 	</insert>
   
   <!-- 로그인 확인 -->
