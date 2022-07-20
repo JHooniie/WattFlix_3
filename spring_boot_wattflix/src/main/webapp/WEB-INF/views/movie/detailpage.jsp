@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,7 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
         <link rel="stylesheet" type="text/css" href="<c:url value='/css/detailpage.css'/>"> 
-
+        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
         <script src="<c:url value='/jsCustom/stillcut.js'/>"></script> 
         <script src="https://kit.fontawesome.com/50d21a2bed.js" crossorigin="anonymous"></script>
     </head>
@@ -28,18 +30,18 @@
             <br><br><br>
             
             <div id="information">
-                <div id="infoBox1">
-                    <a href="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82120/82120_1000.jpg" target="_blank">
-                        <img id="mainposter" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82120/82120_1000.jpg"></a>
+                <div id="infoBox1"> 
+                    <a href="<c:url value='${movie.moviePoster }'/>" target="_blank">
+                        <img id="mainposter" src="<c:url value='${movie.moviePoster }'/>"></a>
                 </div>
                 <div id="infoBox2">
                     <div id="infoDetail">
 
-                        <h2>탑건: 매버릭</h2><br>
-                        <p>장르 : 액션 / 미국&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;등급 : 12세
-                            이상&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;개봉 : 2022.06.22</p>
-                        <p>감독 : 조셉 코신스키</p>
-                        <p>배우 : 톰 크루즈, 마일즈 텔러, 제니퍼 코넬리, 존 햄, 에드 해리스, 글렌 포웰, 제이 앨리스, 그렉 타잔 데이비스</p>
+                        <h2>${movie.movieTitle }</h2><br>
+                        <p>장르 : ${movie.movieGenre}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;등급 : ${movie.movieRating}
+                            이상&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;개봉 : ${movie.movieOpenDate}</p>
+                        <p>감독 : ${movie.movieDirector }</p>
+                        <p>배우 : ${movie.movieActor }</p>
 
                     </div>
                 </div>
@@ -49,13 +51,8 @@
 
             <div id="story">
                 <div id="storyBox">
-                    <h1>한순간의 실수도 용납되지 않는 하늘 위, 가장 압도적인 비행이 시작된다!</h1>
-                    <br>
                     <p>
-                        최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다.<br>
-                        그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만 실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도된다.<br><br>
-                        매버릭의 지휘아래 견고한 팀워크를 쌓아가던 팀원들에게 국경을 뛰어넘는 위험한 임무가 주어지자<br>
-                        매버릭은 자신이 가르친 동료들과 함께 마지막이 될 지 모를 하늘 위 비행에 나서는데…
+                        ${movie.movieDetail }
                     </p>
                 </div>
             </div>
@@ -66,39 +63,33 @@
                 <div id="trailerName">
                     <h3>트레일러</h3>
                 </div>
-                <div id="trailerBox">
-                    <div><iframe height="200" src="https://www.youtube.com/embed/Mrj9XACVJ8U?controls=0" title="YouTube video player"
+                <div id="trailerBox">  <!-- split으로 나눠야 함 : 아직 안 했음 -->
+
+                <c:set var="movieTeaser" value="${movie.movieTeaser}"/>
+                    <c:set var="moTsList" value="${fn:split(movieTeaser,',') }"/>
+                   	 <c:forEach var="mo" items="${moTsList }">
+                    	<div><iframe height="200" src="<c:url value='${mo}'/>" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe></div>
-                    <div><iframe height="200" src="https://www.youtube.com/embed/dsyVH19Lfeo?controls=0" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
-                    <div><iframe height="200" src="https://www.youtube.com/embed/0C-21OGwMd0?controls=0" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
+                    </c:forEach> 
                 </div>
             </div>
 
             <div id="stillcut">
                 <div id="prevNextButtonBox">
-                    <img id="prevButton" src="../image/prevButton.png">
-                    <img id="nextButton" src="../image/nextButton.png">
+                    <img id="prevButton" src="<c:url value='/image/prevButton.png'/>">
+                    <img id="nextButton" src="<c:url value='/image/nextButton.png'/>">
                 </div>
                 <div id="stillcutBox">
                     <div id="slide">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_1.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_2.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_9.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_11.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_17.jpg"
-                            class="stillCutImg">
+                    
+                    <c:set var="movieStillcut" value="${movie.movieStillcut}"/>
+                    <c:set var="moStcList" value="${fn:split(movieStillcut,',') }"/>
+                   	 <c:forEach var="mo" items="${moStcList }">
+                    	<img src="<c:url value='${mo}'/>" width="30" height="20"class="stillCutImg">
+                    </c:forEach>             
+       
                     </div>
                 </div>
             </div>
@@ -110,11 +101,9 @@
                     <h3>비슷한 콘텐츠</h3>
                 </div>
                 <div id="recomBox">
-                    <div><a href="<c:url value='/movie/detailpage2'/>" target="_blank">
-                        <img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000078/78540/78540_1000.jpg"></a></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000076/76417/76417_1000.jpg"></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000080/80789/80789_1000.jpg"></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85813/85813_1000.jpg"></div>
+                	<c:forEach items="${movieList }" var="movieList">
+                		<div><img class="poster" src="<c:url value='${movieList.moviePoster }'/>"></div>&nbsp;&nbsp;
+                	</c:forEach>
                 </div>
             </div>
 

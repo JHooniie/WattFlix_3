@@ -19,8 +19,23 @@
   		<result property="movieTeaser" column="movieTeaser"/>
   	</resultMap>
   	
+  	
+  	<!-- 전체 영화 출력 -->
   	<select id="listAllMovie" resultMap="movieResult">
-  	SELECT * FROM movie ORDER BY movieNo
+  		SELECT * FROM movie ORDER BY movieNo
   	</select>
+  	
+  	<!-- 영화 상세 정보 조회 -->
+  	<select id="detailViewMovie" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
+  		SELECT * FROM movie WHERE movieNo=#{movieNo}
+ 	</select>
+ 	
+
+ 	<!-- 동일 장르 영화 검색 -->
+ 	<select id="listGenMovie" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
+  		SELECT * FROM movie WHERE movieGenre=#{movieGenre}
+ 	</select>
+ 
+
   
   </mapper>
