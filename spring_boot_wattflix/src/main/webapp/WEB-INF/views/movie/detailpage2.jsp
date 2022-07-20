@@ -9,8 +9,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WatFlix</title>
-        <link rel="stylesheet" type="text/css" href="<c:url value='css/detailpage.css'/>"> 
-        <script src="<c:url value='jsCustom/stillcut.js'/>"></script>
+        <link rel="stylesheet" type="text/css" href="<c:url value='/css/detailpage.css'/>"> 
+        <script src="<c:url value='/jsCustom/stillcut.js'/>"></script>
         <script src="https://kit.fontawesome.com/50d21a2bed.js" crossorigin="anonymous"></script>
     
     </head>

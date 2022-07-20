@@ -28,9 +28,9 @@ public class WattflixController {
 		return "movie/posterbook";
 	}
 	
-	@RequestMapping("/movie/commentsView")
-	public String commentsView() {
-		return "movie/commentsView";
+	@RequestMapping("/movie/todayMovieView")
+	public String todayMovieView() {
+		return "movie/todayMovieView";
 	}
 	
 //	 contents 이동
