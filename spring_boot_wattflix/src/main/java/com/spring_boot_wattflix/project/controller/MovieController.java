@@ -63,8 +63,13 @@ public class MovieController {
 		MovieVO movie = movieService.detailViewMovie(movieNo);
 		model.addAttribute("movie", movie);
 		
+		// 동일 장르별 영화 조회 요청 처리
+		ArrayList<MovieVO> movieList = movieService.listGenMovie(movie.getMovieGenre());
+		model.addAttribute("movieList", movieList);
+		
 		return "movie/detailpage";
 	}
+	
 	
 }
 

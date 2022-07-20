@@ -10,6 +10,6 @@ public interface IMovieService {
 	ArrayList<MovieVO> listGenMovie(String movieGenre); // 장르별 영화 조회
 	
 	// test 전체 조회
-		public ArrayList<MovieVO> listAllMovie();
+	public ArrayList<MovieVO> listAllMovie();
 
 }
