@@ -1,14 +1,28 @@
 package com.spring_boot_wattflix.project;
 
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.spring_boot_wattflix.project.model.MovieVO;
+import com.spring_boot_wattflix.project.service.MovieService;
 
 @Controller
 public class WattflixController {
+	// DI 설정
+	@Autowired
+	MovieService movieService;
 	
 //	 nav 이동
 	@RequestMapping("/")		// main
-	public String veiwIndex() {
+	public String veiwIndex(Model model) {
+		// 전체 영화 포스터 출력
+		ArrayList<MovieVO> movieList = movieService.listAllMovie();
+		
+		model.addAttribute("movieList", movieList);
 		return "index";
 	}
 	
