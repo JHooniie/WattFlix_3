@@ -13,7 +13,6 @@
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/jsCustom/index.js'/>"></script>
 		<script src="<c:url value='/jsCustom/main.js'/>"></script>
-		<script src="<c:url value='/jsCustom/mypage_index.js'/>"></script>
 
 		<script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>" crossorigin="anonymous"></script>
 	</head>
@@ -23,7 +22,16 @@
 		<nav id="nav-tab">
 			
 			<div class="nav-outter">
+				<div class="nav-icon">
+					<a href="<c:url value='/'/>" class="icon-item"> <span
+						class="mainLogo">WattFlix</span>
+					</a>
 	
+<!-- 					<div class="nav-menu-icon-x" id="nav-menu-icon-x">
+						<i class="fa-solid fa-xmark fa-lg"></i>
+					</div> -->
+				</div>
+				<br>
 				<div class="nav-menu">
 					<!-- search -->
 					<div class="nav-contents">
