@@ -9,8 +9,10 @@
 	</head>
 	<body>
 		<c:forEach items="${movieList }" var="mo">
+			${mo.movieNo }
 			${mo.movieTitle } 
 			<img src="<c:url value='${mo.moviePoster }'/>" width="30" height="20">
+			${mo.movieGenre }
 			<br>
 		</c:forEach>
 	</body>

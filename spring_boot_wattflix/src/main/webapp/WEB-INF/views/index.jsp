@@ -14,9 +14,28 @@
 					<div class="contents-banner">
 						<span id="plain-text">WattFlix 인기 작품</span>
 					</div>
+					
 					<div class="contents-scroll" id="contents-scroll">
-						<a class="movie" onclick="location.href='index.html'"> <img
-							src="https://movie-phinf.pstatic.net/20190115_228/1547528180168jgEP7_JPEG/movie_image.jpg?type=m203_290_2">
+					<c:forEach items="${movieList }" var="mo">
+						
+						<a class="movie" href="<c:url value='/movie/detailMovie/{movieNo}'/>"> 
+						<img src="<c:url value='${mo.moviePoster }'/>" width="220" height="320">
+							<div id="movie-info">
+								<div>
+									<p>${mo.movieTitle }</p>
+								</div>
+								<span class="material-symbols-outlined" id="bookmark1"
+								onclick="bookmark(this.id)"><i class="fa-regular fa-bookmark"></i></span>
+							</div>
+						</a>
+					
+					</c:forEach>
+					</div>
+					
+					
+					<!-- <div class="contents-scroll" id="contents-scroll">
+						<a class="movie" onclick="location.href='index.html'"> 
+						<img src="https://movie-phinf.pstatic.net/20190115_228/1547528180168jgEP7_JPEG/movie_image.jpg?type=m203_290_2">
 							<div id="movie-info">
 								<div>
 									<p>특별한 우정이 시작된다!</p>
@@ -109,9 +128,9 @@
 							</div>
 						</a>
 
-					</div>
+					</div> -->
 
-					<div class="screening">
+					<!-- <div class="screening">
 						<div class="screening-banner">
 							<span id="plain-text">New Movies on Theaters</span>
 						</div>
@@ -210,7 +229,7 @@
 								</div>
 							</a>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 			</main>
