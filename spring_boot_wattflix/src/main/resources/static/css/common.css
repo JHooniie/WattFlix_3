@@ -26,7 +26,7 @@ a {
     color :  #D7E1E1;
  }
 
- body {
+body {
     min-width: 800px;
     height: 100%;
     margin: 0px;
@@ -40,12 +40,15 @@ a {
 main {
     width: 100%;
     height: inherit;
-    /* padding: 30px; */
     overflow-y: scroll;
     padding-top: 70px;
 }
 
 /* ************** form *************** */
+
+i {
+	margin:5px;
+}
 
 input, select {
     font-weight: 400;
@@ -113,7 +116,8 @@ input, select {
 }
 
 .mainLogo {
-    font-size: 30px;
+	padding:20px;
+    font-size: 40px;
     font-family: PyeongChangPeace-Bold;
 }
 
@@ -136,13 +140,14 @@ input, select {
     font-weight: 700;
     text-align: center;
     padding: 17px 48px;
+    margin:4px;
     color: #fff;
     background-color: #1ED760;
     height: 48px;
     :hover{
         transform: scale(1.04);
         background-color: #21e065;
-    }
+	}
 }
 
 .whiteBtn {
