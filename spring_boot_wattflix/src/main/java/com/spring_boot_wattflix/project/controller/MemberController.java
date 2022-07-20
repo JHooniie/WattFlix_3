@@ -1,5 +1,8 @@
 package com.spring_boot_wattflix.project.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;
@@ -13,8 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.spring_boot_wattflix.project.model.MemberVO;
 import com.spring_boot_wattflix.project.service.MemberService;
 
-
-
 @Controller
 public class MemberController {
 
@@ -23,13 +24,24 @@ public class MemberController {
 
 	// 회원가입
 	@RequestMapping("/member/signUp")
-	public String signUp(MemberVO memVo) {
+	public String signUp(MemberVO memVo, @RequestParam String yyyy,
+										 @RequestParam String mm,
+										 @RequestParam String dd) {
+		
+	try {
+		String birth = yyyy + "-" + mm + "-" + dd;
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+		Date birthDay = fmt.parse(birth);
+		
+		memVo.setMemBirth(birthDay);
+		
 		memService.insertMember(memVo);
+		
+		} catch (ParseException e) {};
+		
 		return "index";
-
 	}
-	
-	
+
 	// 로그인 처리
 //	@ResponseBody
 	@RequestMapping("/member/login")
@@ -43,21 +55,21 @@ public class MemberController {
 		if (memId != null) {
 			// 로그인 성공하면 세션 변수 지정
 			session.setAttribute("sid", memId);
-			
+
 		} else {
-			
+
 		}
 
 		return "redirect:/";
 	}
-	
+
 	// 로그아웃 처리
 	@RequestMapping("/logout")
 	public String userLogout(HttpSession session) {
-		
+
 		// 세션 무효화
 		session.invalidate();
-		
+
 		return "index";
 	}
 }
