@@ -16,9 +16,9 @@
 					</div>
 					
 					<div class="contents-scroll" id="contents-scroll">
-					<c:forEach items="${movieList }" var="mo">
+						<c:forEach items="${movieList }" var="mo">
 						
-						<a class="movie" href="<c:url value='/movie/detailMovie/{movieNo}'/>"> 
+						<a class="movie" href="<c:url value='/movie/detailMovie/${mo.movieNo}'/>"> 
 						<img src="<c:url value='${mo.moviePoster }'/>" width="220" height="320">
 							<div id="movie-info">
 								<div>
