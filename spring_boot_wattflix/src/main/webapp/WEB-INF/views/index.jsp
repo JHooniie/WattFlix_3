@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-			<!-- navbar -->
+			<!-- top bar -->
 			<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 			<!-- navbar -->

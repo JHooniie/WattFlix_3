@@ -9,12 +9,7 @@
 		<title>WattFlix</title>
 		
 		<link rel="stylesheet" href="<c:url value='/css/common.css'/>">
-
-
 		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
-
-
-    
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/jsCustom/index.js'/>"></script>
 		<script src="<c:url value='/jsCustom/main.js'/>"></script>
@@ -53,7 +48,7 @@
 					</div>
 					<!-- comment -->
 					<div class="nav-contents">
-						<a href="<c:url value='/movie/commentsView'/>" class="nav-item">
+						<a href="<c:url value='/movie/todayMovieView'/>" class="nav-item">
 							<i class="fa-solid fa-star fa-lg"></i> <span class="link-text">Comments</span>
 						</a>
 					</div>
