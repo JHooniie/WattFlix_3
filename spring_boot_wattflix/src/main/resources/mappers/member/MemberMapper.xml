@@ -15,7 +15,7 @@
   
   <!-- 로그인 확인 -->
    <select id="loginCheck" parameterType="hashmap" resultType="string">
-  	SELECT memId FROM member WHERE memId=#{memId} and memPwd=#{memPwd}
+		SELECT memId FROM member WHERE memId=#{memId} and memPwd=#{memPwd}
   </select>
   
   </mapper>
