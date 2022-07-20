@@ -70,17 +70,17 @@
 					<div class="profile_box">
 
 						<div id="profile_box_a">
-							<a href="../html/posterbook.html" class="a_item"> <span
-								class="link-text">관심 영화</span> <i
-								class="fa-regular fa-heart fa-lg"></i>
+							<a href="<c:url value='/movie/posterView'/>" class="a_item"> <span class="link-text">관심 영화</span>
+							<i class="fa-regular fa-heart fa-lg"></i>
 							</a>
 
 
 						</div>
 
 						<div id="profile_box_a">
-							<a href="index.html" class="a_item"> <span class="link-text">작성한
-									코멘트</span> <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+							<a href="index.html" class="a_item">
+							<span class="link-text">작성한 코멘트</span>
+							<i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
 							</a>
 						</div>
 
@@ -89,9 +89,6 @@
 				</div>
 
 			</div>
-
-		</div>
-
 
 
 	</div>

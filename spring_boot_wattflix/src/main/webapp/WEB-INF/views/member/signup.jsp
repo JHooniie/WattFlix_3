@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!-- <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -9,12 +10,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="minimum-scale=10">
         <title>WattFlix</title> -->
-<%--         <link rel="stylesheet" href="<c:url value='/css/common.css'/>">
-        <link rel="stylesheet" href="<c:url value='/css/index.css'/>"> --%>
+        
         <link rel="stylesheet" href="<c:url value='/css/signup.css'/>">
-<%--         <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
-        <script src="<c:url value='/jsCustom/index.js'/>"></script> --%>
+        
         <script src="<c:url value='/jsCustom/signup.js'/>"></script>
+        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+        <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+		<script src="<c:url value='/js/searchZip.js'/>"></script>
             
     </head>
     <body>
@@ -66,7 +68,8 @@
                             <!-- 생년월일 Start -->
                             <label for="yy">생년월일</label><br>
                             <div class="bday-wrap">
-                                <input class="signup-input" type="text" name="yy" id="yy" placeholder="년(yyyy)">
+                                <input class="signup-input" type="text" name="yyyy" id="yyyy" placeholder="년도(4글자)">
+                                
                                 <select class="signup-input" name="mm" id="mm">
                                     <option>월</option>
                                     <option value="01">1</option>
@@ -82,7 +85,42 @@
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                <input class="signup-input" type="text" id="dd" name="dd" placeholder="일">
+                                
+                                    <select class="signup-input" name="dd" id="dd">
+                               		<option>일</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    
+                                   </select>
                             </div>
                             <!-- 생년월일 End -->
                             <br>
@@ -97,7 +135,15 @@
                             <input class="signup-input" type="text" id="memHpCheck" name="memHpCheck" placeholder="인증번호 입력하세요.">
                         </div>
                         <br>
-                        <label>관심 분야</label>
+                        
+                         	<label>주소</label>
+                        	<input  class="signup-input" type="text" id="memZipcode" name="memZipcode" placeholder="우편번호" readonly>
+		            		<input type="button" id="searchZipBtn" name="searchZipBtn" value="우편번호 찾기"><br>
+		            		
+		            		<input class="signup-input" type="text" id="memAddress1" name="memAddress1" placeholder="주소 입력" readonly>
+		            		<input class="signup-input" type="text" id="memAddress2" name="memAddress2" placeholder="상세 주소 입력">
+                         
+                        	<label>관심 분야</label>
                             <table class="signup-input">
                                 <tr>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-comedy" value="comedy"></td><td><label class="chkLabel" for="gr-comedy">코미디</label></td>

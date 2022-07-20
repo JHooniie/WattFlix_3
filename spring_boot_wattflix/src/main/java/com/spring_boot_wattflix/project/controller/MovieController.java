@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring_boot_wattflix.project.model.MovieVO;
 import com.spring_boot_wattflix.project.service.MovieService;
@@ -58,13 +59,20 @@ public class MovieController {
 	
 	// 영화 상세 정보 조회 : /movie/detailMovie
 	@RequestMapping("/movie/detailMovie/{movieNo}")
-	public String detailViewMovie(@PathVariable String movieNo, Model model) {
+	public String detailViewMovie(@PathVariable String movieNo,
+								Model model) {
 		// 영화번호(movieNo) 전달, 해당 영화의 정보 반환
 		MovieVO movie = movieService.detailViewMovie(movieNo);
+		
 		model.addAttribute("movie", movie);
+		
+		// 동일 장르별 영화 조회 요청 처리
+		ArrayList<MovieVO> movieList = movieService.listGenMovie(movie.getMovieGenre());
+		model.addAttribute("movieList", movieList);
 		
 		return "movie/detailpage";
 	}
+	
 	
 }
 

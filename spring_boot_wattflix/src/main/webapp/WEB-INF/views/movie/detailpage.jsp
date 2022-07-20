@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -62,18 +64,15 @@
                     <h3>트레일러</h3>
                 </div>
                 <div id="trailerBox">  <!-- split으로 나눠야 함 : 아직 안 했음 -->
-                    <div><iframe height="200" src="<c:url value='${movie.movieTeaser }'/>" title="YouTube video player"
+
+                <c:set var="movieTeaser" value="${movie.movieTeaser}"/>
+                    <c:set var="moTsList" value="${fn:split(movieTeaser,',') }"/>
+                   	 <c:forEach var="mo" items="${moTsList }">
+                    	<div><iframe height="200" src="<c:url value='${mo}'/>" title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe></div>
-                    <div><iframe height="200" src="https://www.youtube.com/embed/dsyVH19Lfeo?controls=0" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
-                    <div><iframe height="200" src="https://www.youtube.com/embed/0C-21OGwMd0?controls=0" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe></div>
+                    </c:forEach> 
                 </div>
             </div>
 
@@ -84,16 +83,13 @@
                 </div>
                 <div id="stillcutBox">
                     <div id="slide">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_1.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_2.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_9.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_11.jpg"
-                            class="stillCutImg">
-                        <img src="https://caching.lottecinema.co.kr//Media/MovieFile/MovieImg/202006/14702_105_17.jpg"
-                            class="stillCutImg">
+                    
+                    <c:set var="movieStillcut" value="${movie.movieStillcut}"/>
+                    <c:set var="moStcList" value="${fn:split(movieStillcut,',') }"/>
+                   	 <c:forEach var="mo" items="${moStcList }">
+                    	<img src="<c:url value='${mo}'/>" width="30" height="20"class="stillCutImg">
+                    </c:forEach>             
+       
                     </div>
                 </div>
             </div>
@@ -105,11 +101,14 @@
                     <h3>비슷한 콘텐츠</h3>
                 </div>
                 <div id="recomBox">
-                    <div><a href="<c:url value='/movie/detailpage2'/>" target="_blank">
-                        <img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000078/78540/78540_1000.jpg"></a></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000076/76417/76417_1000.jpg"></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000080/80789/80789_1000.jpg"></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85813/85813_1000.jpg"></div>
+                	<c:forEach items="${movieList }" var="movieList">
+                		<c:if test="${movieList.moviePoster ne movie.moviePoster }">
+                			<div>
+	                			<a href="<c:url value='/movie/detailMovie/${movieList.movieNo}'/>" target="_blank">
+	                			<img class="poster" src="<c:url value='${movieList.moviePoster }'/>"></a>
+                			</div>&nbsp;&nbsp;
+                		</c:if>
+                	</c:forEach>
                 </div>
             </div>
 

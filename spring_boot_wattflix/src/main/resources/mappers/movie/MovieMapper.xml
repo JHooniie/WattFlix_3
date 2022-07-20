@@ -29,5 +29,13 @@
   	<select id="detailViewMovie" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
   		SELECT * FROM movie WHERE movieNo=#{movieNo}
  	</select>
+ 	
+
+ 	<!-- 동일 장르 영화 검색 -->
+ 	<select id="listGenMovie" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
+  		SELECT * FROM movie WHERE movieGenre=#{movieGenre}
+ 	</select>
+ 
+
   
   </mapper>

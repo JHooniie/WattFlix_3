@@ -8,7 +8,7 @@ public class MemberVO {
 	private String memId;
 	private String memPwd;
 	private String memNickname;
-	@DateTimeFormat(pattern="yyyy.MM.dd")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date memBirth;
 	private String memHp;
 	private String memZipcode;
