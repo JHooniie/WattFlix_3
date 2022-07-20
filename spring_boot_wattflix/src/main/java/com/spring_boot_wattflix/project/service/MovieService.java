@@ -31,4 +31,5 @@ public class MovieService implements IMovieService {
 		return dao.listAllMovie();
 	}
 
+
 }
