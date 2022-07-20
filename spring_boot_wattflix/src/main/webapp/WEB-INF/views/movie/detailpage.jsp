@@ -64,6 +64,7 @@
                     <h3>트레일러</h3>
                 </div>
                 <div id="trailerBox">  <!-- split으로 나눠야 함 : 아직 안 했음 -->
+
                 <c:set var="movieTeaser" value="${movie.movieTeaser}"/>
                     <c:set var="moTsList" value="${fn:split(movieTeaser,',') }"/>
                    	 <c:forEach var="mo" items="${moTsList }">
@@ -100,11 +101,9 @@
                     <h3>비슷한 콘텐츠</h3>
                 </div>
                 <div id="recomBox">
-                    <div><a href="<c:url value='/movie/detailpage2'/>" target="_blank">
-                        <img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000078/78540/78540_1000.jpg"></a></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000076/76417/76417_1000.jpg"></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000080/80789/80789_1000.jpg"></div>
-                    <div><img class="poster" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000085/85813/85813_1000.jpg"></div>
+                	<c:forEach items="${movieList }" var="movieList">
+                		<div><img class="poster" src="<c:url value='${movieList.moviePoster }'/>"></div>&nbsp;&nbsp;
+                	</c:forEach>
                 </div>
             </div>
 

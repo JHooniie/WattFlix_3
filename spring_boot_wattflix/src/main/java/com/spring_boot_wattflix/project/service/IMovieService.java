@@ -11,5 +11,6 @@ public interface IMovieService {
 	
 	
 	// test 전체 조회
-		public ArrayList<MovieVO> listAllMovie();
+	public ArrayList<MovieVO> listAllMovie();
+
 }
