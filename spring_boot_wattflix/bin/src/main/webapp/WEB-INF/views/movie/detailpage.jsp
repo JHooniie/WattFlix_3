@@ -20,7 +20,10 @@
     </head>
 
 <body>
-    <!-- navbar -->
+   	<!-- top bar -->
+	<c:import url="/WEB-INF/views/layout/top.jsp" />
+	
+	<!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
     <!-- main 안쪽에 작성하신 div 넣어주세요 -->
@@ -39,11 +42,27 @@
 
                         <h2>${movie.movieTitle }</h2><br>
                         <p>장르 : ${movie.movieGenre}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;등급 : ${movie.movieRating}
-                            이상&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;개봉 : ${movie.movieOpenDate}</p>
+                            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;개봉 : ${movie.movieOpenDate}</p>
                         <p>감독 : ${movie.movieDirector }</p>
                         <p>배우 : ${movie.movieActor }</p>
 
                     </div>
+                    <br>
+                   
+                   	<!-- 별점 -->
+                   	<!-- value="1"인 부분은 database에 넣은 실 때 값을 가져와 사용하시면 됩니다. -->
+                    <div>
+                    <P id="star">
+					   <a href="#" value="1">★</a>
+					   <a href="#" value="2">★</a>
+					   <a href="#" value="3">★</a>
+					   <a href="#" value="4">★</a>
+					   <a href="#" value="5">★</a>
+					<p>
+					
+					</div>
+                    
+                    
                 </div>
             </div>
 
@@ -52,7 +71,11 @@
             <div id="story">
                 <div id="storyBox">
                     <p>
-                        ${movie.movieDetail }
+                    <c:set var="movieDetail" value="${movie.movieDetail }"/>
+                    <c:set var="moStcList2" value="${fn:split(movieDetail,'<br>') }"/>
+                   	 <c:forEach var="mo" items="${moStcList2 }">
+                    	${mo }<br><br>
+                    </c:forEach>
                     </p>
                 </div>
             </div>

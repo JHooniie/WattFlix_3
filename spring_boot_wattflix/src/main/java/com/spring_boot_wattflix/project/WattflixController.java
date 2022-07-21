@@ -38,14 +38,14 @@ public class WattflixController {
 		return "movie/movierank";
 	}
 
-	@RequestMapping("/movie/posterView")
-	public String posterView() {
-		return "movie/posterbook";
-	}
+//	@RequestMapping("/movie/mymovieView")
+//	public String posterView() {
+//		return "movie/mymovie";
+//	}
 
 	@RequestMapping("/movie/todayMovieView")
 	public String todayMovieView() {
-		return "movie/todayMovieView";
+		return "movie/todaymovie";
 	}
 
 //	 contents 이동
