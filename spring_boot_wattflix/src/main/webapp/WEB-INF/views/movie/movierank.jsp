@@ -8,6 +8,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+<link rel="stylesheet" href="<c:url value='/css/movierank.css'/>">
+<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+<script src="<c:url value='/jsCustom/movierank.js'/>"></script>
+
 </head>
 <body>
 	<!-- top bar -->
