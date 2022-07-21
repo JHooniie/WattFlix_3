@@ -8,7 +8,8 @@ public interface IMyMovieService {
 	// 비회원 북마크 회원가입 유도
 	
 	// 회원 마이무비 추가
-	public void insertMymovie(MyMovieVO mmovie);
+	public void insertLike(MyMovieVO vo);
+	public void insertDislike(MyMovieVO vo);
 	
 	public int checkMymovie(String movieNo, String memId);
 	
