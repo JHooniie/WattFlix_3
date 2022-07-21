@@ -9,7 +9,7 @@
 			<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
 			<!-- main 안쪽에 작성하신 div 넣어주세요 -->
-			<main id="main">
+			<main>
 				<div class="contents">
 					<div class="contents-banner">
 						<span id="plain-text">WattFlix 인기 작품</span>
@@ -17,19 +17,23 @@
 					
 					<div class="contents-scroll" id="contents-scroll">
 						<c:forEach items="${movieList }" var="mo">
-						
-						<a class="movie" href="<c:url value='/movie/detailMovie/${mo.movieNo}'/>"> 
-						<img src="<c:url value='${mo.moviePoster }'/>" width="220" height="320">
-							<div id="movie-info">
-								<div>
-									<p>${mo.movieTitle }</p>
+							<div id="movie-info-img">
+								<div class="movie-info-poster">
+									<a class="movie" href="<c:url value='/movie/detailMovie/${mo.movieNo}'/>"> 
+										<img src="<c:url value='${mo.moviePoster }'/>" width="220" height="320">
+									</a>
+								
+									<div class="movie-info-title">
+										<h2>${mo.movieTitle }</h2>
+									</div>
+									<div class="movie-info-icon">
+										<a href="<c:url value='/mymovie/insertLike/${mo.movieNo}'/>"> 
+											<i class="fa-regular fa-heart fa-2xl"></i>
+										</a>
+									</div>
 								</div>
-								<span class="material-symbols-outlined" id="bookmark1"
-								onclick="bookmark(this.id)"><i class="fa-regular fa-bookmark"></i></span>
-							</div>
-						</a>
-					
-					</c:forEach>
+							</div> 
+						</c:forEach>
 					</div>
 					<br><br><br><br><br>
 					
