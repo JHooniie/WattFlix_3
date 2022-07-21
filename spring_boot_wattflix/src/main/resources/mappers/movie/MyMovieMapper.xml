@@ -14,10 +14,16 @@
   	</resultMap>
   	
   	
-  	<!-- 삽입 -->
-  	<insert id="insertMymovie" parameterType="com.spring_boot_wattflix.project.model.MyMovieVO">
-  		INSERT INTO myMovie (memId,movieNo)
-  		VALUES (#{memId},#{movieNo})
+  	<!-- 마이무비 좋아요 -->
+  	<insert id="insertLike" parameterType="com.spring_boot_wattflix.project.model.MyMovieVO">
+  		INSERT INTO myMovie (memId,movieNo, myLike)
+  		VALUES (#{memId},#{movieNo}, true )
+  	</insert>
+  	
+  	<!-- 마이무비 추천안하기 -->
+  	<insert id="insertDislike" parameterType="com.spring_boot_wattflix.project.model.MyMovieVO">
+  		INSERT INTO myMovie (memId,movieNo, like)
+  		VALUES (#{memId},#{movieNo}, false )
   	</insert>
   	
   	<!-- 삭제 -->
@@ -30,12 +36,12 @@
   	<select id="listAllMymovie" parameterType="string" resultMap="movieResult">
   		SELECT *
 		FROM myMovie mm, movie m
-		WHERE mm.movieNo = m.movieNo AND mm.memId=#{memId};
+		WHERE mm.movieNo = m.movieNo AND mm.memId=#{memId}
  	</select>
  	
  	<!-- 조회 -->
- 	<select id="checkMymovie" parameterType="hashMap" resultType="int">
-  		SELECT * FROM myMovie WHERE movieGenre=#{movieGenre}
+  	<select id="checkMymovie" parameterType="hashMap" resultType="int">
+  		SELECT COUNT(*) FROM myMovie WHERE movieNo = #{movieNo} AND memId = #{memId};
  	</select>
  
   </mapper>
