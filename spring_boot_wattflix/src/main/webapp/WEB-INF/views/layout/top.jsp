@@ -20,6 +20,7 @@
 	crossorigin="anonymous"></script>
 <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 
+
 <!-- CSS only -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -33,6 +34,7 @@
 	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 	crossorigin="anonymous"></script>
 
+
 <script src="<c:url value='/jsCustom/index.js'/>"></script>
 <script src="<c:url value='/jsCustom/main.js'/>"></script>
 <script src="<c:url value='/jsCustom/movierank.js'/>"></script>
@@ -43,6 +45,7 @@
 	<!-- TOP HEAD -->
 	<header id="top-wrap">
 		<div class="top-container">
+
 
 			<!-- 로그인 하지 않은 경우 보여줄 메뉴 항목 -->
 			<c:if test="${empty sessionScope.sid }">
@@ -65,6 +68,7 @@
 								<input type="text" placeholder="Email" id="memId" name="memId">
 								<input type="password" placeholder="Password" id="memPwd"
 									name="memPwd">
+
 							</div>
 							<button class="greenBtn" type="submit" style="width: 222px;">
 								<span>Login</span>
@@ -107,4 +111,5 @@
 			</c:if>
 
 		</div>
+
 	</header>
