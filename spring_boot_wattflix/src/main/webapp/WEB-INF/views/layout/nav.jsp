@@ -17,7 +17,6 @@
 	
 		<!-- navbar 부분입니다 -->
 		<nav id="nav-tab">
-			
 			<div class="nav-outter">
 				<div class="nav-icon">
 					<a href="<c:url value='/'/>" class="icon-item"> <span
