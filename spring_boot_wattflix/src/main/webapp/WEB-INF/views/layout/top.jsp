@@ -10,11 +10,17 @@
 		
 		<link rel="stylesheet" href="<c:url value='/css/common.css'/>">
 		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
-		<script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="<c:url value='/css/main.css'/>">
+		<link rel="stylesheet" href="<c:url value='/css/movierank.css'/>">
+		<link rel="icon" href="<c:url value='/image/favicon.ico'/>" type="image/x-icon" sizes="16x16">
+	    <link rel="stylesheet" href="<c:url value='/css/posterbook.css'/>">
 
+		<script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>" crossorigin="anonymous"></script>
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/jsCustom/index.js'/>"></script>
+		<script src="<c:url value='/jsCustom/main.js'/>"></script>
+		<script src="<c:url value='/jsCustom/movierank.js'/>"></script>
+	    <script src="<c:url value='/jsCustom/posterbook.js'/>"></script>
 
 	</head>
 	<body>

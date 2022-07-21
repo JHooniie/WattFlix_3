@@ -10,10 +10,7 @@
 		
 		<link rel="stylesheet" href="<c:url value='/css/common.css'/>">
 		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
-		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
-		<script src="<c:url value='/jsCustom/index.js'/>"></script>
-		<script src="<c:url value='/jsCustom/main.js'/>"></script>
-
+		
 		<script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>" crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -33,6 +30,13 @@
 				</div>
 				<br>
 				<div class="nav-menu">
+					<!-- comment -->
+					<div class="nav-contents">
+						<a href="<c:url value='/movie/todayMovieView'/>" class="nav-item">
+							<i class="fa-solid fa-star fa-lg"></i> <span class="link-text">Today's Movie</span>
+						</a>
+					</div>
+					
 					<!-- search -->
 					<div class="nav-contents">
 						<a href="<c:url value='/movie/searchView'/>" class="nav-item">
@@ -48,18 +52,14 @@
 							class="link-text">Rank</span>
 						</a>
 					</div>
+					
 					<!-- my poster -->
 					<div class="nav-contents">
-						<a href="<c:url value='/movie/posterView'/>" class="nav-item">
-							<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">Poster</span>
+						<a href="<c:url value='/movie/mymovieView'/>" class="nav-item">
+							<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">My Movie</span>
 						</a>
 					</div>
-					<!-- comment -->
-					<div class="nav-contents">
-						<a href="<c:url value='/movie/todayMovieView'/>" class="nav-item">
-							<i class="fa-solid fa-star fa-lg"></i> <span class="link-text">Comments</span>
-						</a>
-					</div>
+					
 					<!-- gruop -->
 					<div class="nav-contents">
 						<a href="<c:url value='/ent/chatView'/>" class="nav-item">
