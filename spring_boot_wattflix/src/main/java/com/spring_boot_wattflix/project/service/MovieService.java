@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.spring_boot_wattflix.project.dao.IMovieDAO;
+import com.spring_boot_wattflix.project.model.MovieScoreVO;
 import com.spring_boot_wattflix.project.model.MovieVO;
 
 @Service
@@ -42,5 +43,17 @@ public class MovieService implements IMovieService {
 	}
 
 
+
+	@Override
+	public ArrayList<MovieScoreVO> getMovieScoreInfo(String memId) {
+		// TODO Auto-generated method stub
+		return dao.getMovieScoreInfo(memId);
+	}
+
+	@Override
+	public void insertMovieScore(HashMap<String, Object> param) {
+		// TODO Auto-generated method stub
+		dao.insertMovieScore(param);
+	}
 
 }
