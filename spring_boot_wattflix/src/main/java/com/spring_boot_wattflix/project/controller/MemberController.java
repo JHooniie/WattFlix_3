@@ -47,6 +47,15 @@ public class MemberController {
 		return "index";
 	}
 	
+	// 회원 정보 수정
+	
+		@RequestMapping("/member/update")
+		public String update(MemberVO memVo) {
+		memService.memberUpdate(memVo);
+		return "index";
+		}
+		
+		
 	
 	/*
 	 * // 회원탈퇴
@@ -101,12 +110,7 @@ public class MemberController {
 	}
 	
 	
-	// 회원 정보 수정 
-	@RequestMapping("member/update")
-	public String userupdate() {
-	
-		return "member/update";	
-	}
+
 	
 	
 	

@@ -65,7 +65,7 @@ public class MemberService implements IMemberService {
 	public MemberVO profileView(String memId) {
 		return dao.profileView(memId);
 	}
-
+	
 		
 
 
