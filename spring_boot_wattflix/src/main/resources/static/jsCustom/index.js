@@ -11,21 +11,22 @@ function login_dropdown(){
 
 // nav 슬라이드 펼치기
 window.onload = function (){
-	const navMenuIcon = document.querySelector('#nav-menu-icon');
-	const nav = document.querySelector('#nav-tab');
+	var navMenuIcon = document.querySelector('#nav-menu-icon');
+	var nav = document.querySelector('#nav-tab');
 	navMenuIcon.addEventListener('click', () => {
     	nav.classList.add('open');
 		navMenuIcon.style.opacity='0';
 	});
 
 // nav 슬라이드 접기
-	const main = document.querySelector('#main');
-	const login_form = document.getElementById("login-div");
-	const nav_x = document.querySelector('#nav-tab');
+	var main = document.querySelector('main');
+	var login_form = document.getElementById("login-div");
+	var nav_x = document.querySelector('#nav-tab');
+	
 	main.addEventListener('click', () => {
+		navMenuIcon.style.opacity='1';
 		nav_x.classList.remove('open');
 		login_form.style.display='none';
-		navMenuIcon.style.opacity='1';
 	});
 
 }

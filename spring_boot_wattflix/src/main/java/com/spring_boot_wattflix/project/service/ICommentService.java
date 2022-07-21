@@ -9,5 +9,5 @@ public interface ICommentService {
 		public void insertComment(CommentVO vo);
 		public void updateComment(CommentVO vo);
 		public void deleteComment(CommentVO vo);
-		public ArrayList<CommentVO> listAllComment();
+		ArrayList<CommentVO> listAllComment(String movieNo);
 }

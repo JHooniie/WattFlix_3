@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_wattflix.project.dao.IMyMovieDAO">
+  <resultMap id="movieResult" type="com.spring_boot_wattflix.project.model.MyMovieVO" >
+  		<result property="myMovieNo" column="myMovieNo"/>
+  		<result property="memId" column="memId"/>
+  		<result property="movieNo" column="movieNo"/>
+  		<result property="myMovieRegdate" column="myMovieRegdate"/>
+  		<result property="movieTitle" column="movieTitle"/>
+  		<result property="moviePoster" column="moviePoster"/>
+  	</resultMap>
+  	
+  	
+  	<!-- 삽입 -->
+  	<insert id="insertMymovie" parameterType="com.spring_boot_wattflix.project.model.MyMovieVO">
+  		INSERT INTO myMovie (memId,movieNo)
+  		VALUES (#{memId},#{movieNo})
+  	</insert>
+  	
+  	<!-- 삭제 -->
+  	<delete id="deleteMymovie" parameterType="hashMap">
+  		DELETE * FROM myMovie WHERE memId=#{memId} AND movieNo=#{movieNo}
+ 	</delete>
+ 	
+
+ 	<!-- 전체 조회 -->
+  	<select id="listAllMymovie" parameterType="string" resultMap="movieResult">
+  		SELECT *
+		FROM myMovie mm, movie m
+		WHERE mm.movieNo = m.movieNo AND mm.memId=#{memId};
+ 	</select>
+ 	
+ 	<!-- 조회 -->
+ 	<select id="checkMymovie" parameterType="hashMap" resultType="int">
+  		SELECT * FROM myMovie WHERE movieGenre=#{movieGenre}
+ 	</select>
+ 
+  </mapper>
