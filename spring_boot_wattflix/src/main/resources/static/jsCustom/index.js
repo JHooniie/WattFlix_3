@@ -33,5 +33,3 @@ window.onload = function (){
 // 인덱스 애니메이션
 	var poster = document.querySelector('')
 }
-
-

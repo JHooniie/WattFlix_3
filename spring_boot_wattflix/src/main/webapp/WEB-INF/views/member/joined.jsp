@@ -26,7 +26,9 @@
     
     </head>
     <body>
-     	<!-- navbar -->
+     	<!-- top bar -->
+		<c:import url="/WEB-INF/views/layout/top.jsp" />
+	    <!-- navbar -->
 		<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
         <!-- main 안쪽에 작성하신 div 넣어주세요 -->
@@ -35,9 +37,14 @@
 	        	<div class="content_head">
 		        	<h1 class="page_title"><span style="font-family: PyeongChangPeace-Bold;">WattFlix</span></h1>
 		        	<p class="page_info">
+		        	<br>
+		        	<br>
 			        <h1>회원가입이 완료되었습니다!</h1>
+			        <br>
                 </div>
-                   <button onclick="location.href='../index.html';">영화 찾아보러 가기</button>
+                	<a href="<c:url value='/'/>">
+              	     	<input type="button" class="greenBtn" value="영화 찾으러가기">
+                   	</a>
 		    	</div>
 		</div>
 	</div>

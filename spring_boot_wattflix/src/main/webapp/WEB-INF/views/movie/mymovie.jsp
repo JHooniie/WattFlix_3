@@ -8,6 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+    <script src="<c:url value='/jsCustom/posterbook.js'/>"></script>
     
     <!-- custom link -->
 </head>
@@ -31,10 +33,8 @@
                     <button class="btn">#장르</button>
                 </div>
                 <div class="searchbarContainer"><label>
-                        <span class="material-symbols-outlined">
-                            search
-                        </span>
-                        <input class="searchbar" type="text" placeholder="어떤 영화를 보고싶은가요?"></label>
+                      <i class="fa-solid fa-magnifying-glass"></i></label>
+                      <input type="text" placeholder="어떤 영화를 보고싶은가요?">
                 </div>
             </div> <!-- toolbar -->
             <!-- 중간 타이틀 -->
@@ -53,7 +53,7 @@
                     </li>
                    <c:forEach items="${ myMovieList}" var="like">
 	                    
-	                    <div class="card movie">
+	                    <div class="card movie marked">
 						  		<img src="<c:url value='${like.moviePoster }'/>" width="220" height="320">
 							  	<div class="inner-content">
 									<div class="movie-info-title">

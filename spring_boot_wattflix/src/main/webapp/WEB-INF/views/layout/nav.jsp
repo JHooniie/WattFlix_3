@@ -29,9 +29,6 @@
 						class="mainLogo">WattFlix</span>
 					</a>
 
-					<!-- 					<div class="nav-menu-icon-x" id="nav-menu-icon-x">
-						<i class="fa-solid fa-xmark fa-lg"></i>
-					</div> -->
 				</div>
 				<br>
 				<div class="nav-menu">

@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>WattFlix</title>
 
+<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 <link rel="stylesheet" href="<c:url value='/css/common.css'/>">
 <link rel="stylesheet" href="<c:url value='/css/index.css'/>">
 <link rel="stylesheet" href="<c:url value='/css/main.css'/>">
@@ -18,7 +19,6 @@
 
 <script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>"
 	crossorigin="anonymous"></script>
-<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 
 
 <!-- CSS only -->

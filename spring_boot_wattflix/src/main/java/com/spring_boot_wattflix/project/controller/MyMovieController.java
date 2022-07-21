@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_wattflix.project.model.MyMovieVO;
 import com.spring_boot_wattflix.project.service.MyMovieService;
@@ -24,28 +23,35 @@ public class MyMovieController {
 	public String insertLike(@PathVariable String movieNo,
 							HttpSession session,
 							HttpServletRequest request,
-							MyMovieVO vo,
-							Model model) {
+							MyMovieVO vo) {
 		// 로그인 세션 가져오기
 		String memId = (String)session.getAttribute("sid");
 		vo.setMemId(memId);
 		vo.setMovieNo(movieNo);
-		String msg="";
-		
 		System.out.println(memId);
 		
-		// 동일 영화 존재 여부 확인
-		int count = service.checkMymovie(vo.getMovieNo(), memId);
-		if (count == 0) {
-			service.insertLike(vo);
-			msg="My Movie에 추가되었습니다.";
+		String msg="";
+		String url="";
+		
+		if (memId == null) {
+			request.setAttribute("msg", "로그인이 필요합니다.");
+			request.setAttribute("url", "/");
+			return "alert";
 		} else {
-			// 추가되지 않고, 이미 추가된 영화임을 알려주기
-			msg="이미 추가된 영화입니다.";
+			// 동일 영화 존재 여부 확인
+			int count = service.checkMymovie(vo.getMovieNo(), memId);
+			if (count == 0) {
+				service.insertLike(vo);
+				msg="My Movie에 추가되었습니다.";
+			} else {
+				// 추가되지 않고, 이미 추가된 영화임을 알려주기
+				msg="이미 추가된 영화입니다.";
+			}
+			request.setAttribute("msg", msg);
+			request.setAttribute("url", "redirect:/mymovie/mymovieView");
 		}
-		model.addAttribute("msg", msg);
-//		return "redirect:/movie/detailMovie/{movieNo}";
-		return "redirect:" + request.getHeader("Referer");
+		
+		return "layout/alert";
 	}
 	
 	@RequestMapping("/mymovie/insertDislike/{movieNo}")
@@ -66,7 +72,7 @@ public class MyMovieController {
 		int count = service.checkMymovie(vo.getMovieNo(), memId);
 		if (count == 0) {
 			service.insertDislike(vo);
-			msg="해당 영화를 더이상 추천하지 않습니다.";
+			msg="해당 영화를 더 이상 추천하지 않습니다.";
 		} else {
 			// 추가되지 않고, 이미 추가된 영화임을 알려주기
 //			msg="이미 추가된 영화입니다.";

@@ -44,7 +44,7 @@ public class MemberController {
 		
 		} catch (ParseException e) {};
 		
-		return "index";
+		return "member/joined";
 	}
 	
 	
