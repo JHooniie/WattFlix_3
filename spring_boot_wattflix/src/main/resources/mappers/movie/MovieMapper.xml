@@ -35,6 +35,19 @@
  	<select id="listGenMovie" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieVO">
   		SELECT * FROM movie WHERE movieGenre=#{movieGenre}
  	</select>
+ 	
+ 	
+ 	<!-- 오늘의 영화 추천 -->
+ 	
+ 	<!-- 액션 장르 추천 -->
+ 	<select id="RecMovieGenAction" resultMap="movieResult">
+ 		SELECT * FROM movie WHERE movieGenre LIKE '액션';
+ 	</select>
+ 	
+ 		<!-- 드라마 장르 추천 -->
+ 	<select id="RecMovieGenDrama" resultMap="movieResult">
+ 		SELECT * FROM movie WHERE movieGenre LIKE '드라마';
+ 	</select>
  
 
 	<select id="movieSearch" parameterType="hashmap" resultMap="movieResult">

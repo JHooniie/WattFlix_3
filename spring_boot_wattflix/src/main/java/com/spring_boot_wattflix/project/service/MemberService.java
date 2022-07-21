@@ -16,13 +16,15 @@ public class MemberService implements IMemberService {
 	@Autowired
 	@Qualifier("IMemberDAO")
 	IMemberDAO dao;
-
+	
+	// 회원가입
 	@Override
 	public void insertMember(MemberVO memVo) {
 		dao.insertMember(memVo);
 
 	}
-
+	
+	// 회원탈퇴
 	@Override
 	public void deleteMember(String memId) {
 		dao.deleteMember(memId);
