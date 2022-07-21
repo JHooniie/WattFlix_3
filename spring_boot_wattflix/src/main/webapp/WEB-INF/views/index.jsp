@@ -21,7 +21,6 @@
 
 		<div class="contents-events">
 
-
 			<div class="contents-event">
 
 				<figure class="event_img">
