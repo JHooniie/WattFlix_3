@@ -61,7 +61,7 @@
 
 					<!-- my poster -->
 					<div class="nav-contents">
-						<a href="<c:url value='/movie/mymovieView'/>" class="nav-item">
+						<a href="<c:url value='/mymovie/mymovieView'/>" class="nav-item">
 							<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">My
 								Movie</span>
 						</a>

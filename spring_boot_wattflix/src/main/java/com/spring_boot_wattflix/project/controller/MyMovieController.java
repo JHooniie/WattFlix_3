@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_wattflix.project.model.MyMovieVO;
 import com.spring_boot_wattflix.project.service.MyMovieService;
@@ -45,8 +46,6 @@ public class MyMovieController {
 		model.addAttribute("msg", msg);
 //		return "redirect:/movie/detailMovie/{movieNo}";
 		return "redirect:" + request.getHeader("Referer");
-
-
 	}
 	
 	@RequestMapping("/mymovie/insertDislike/{movieNo}")
@@ -77,13 +76,22 @@ public class MyMovieController {
 	}
 	
 	// mymovie 리스트 뷰
-	@RequestMapping("/movie/mymovieView")
+	@RequestMapping("/mymovie/mymovieView")
 	public String listAllMymovie(HttpSession session, Model model) {
 		String memId = (String)session.getAttribute("sid");
 		ArrayList<MyMovieVO> myMovieList = service.listAllMymovie(memId);
 		
 		model.addAttribute("myMovieList", myMovieList);
 		return "movie/mymovie";
+	}
+	
+	// mymovie 제거
+	@RequestMapping("/mymovie/deleteMymovie/{movieNo}")
+	public String deleteMymovie(@PathVariable String movieNo, HttpSession session) {
+		String memId = (String)session.getAttribute("sid");
+		service.deleteMymovie(movieNo, memId);
+		
+		return "redirect:/mymovie/mymovieView";
 	}
 	
 }
