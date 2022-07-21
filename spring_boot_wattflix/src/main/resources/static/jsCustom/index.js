@@ -29,7 +29,13 @@ window.onload = function (){
 		login_form.style.display='none';
 	});
 
-
-// 인덱스 애니메이션
-	var poster = document.querySelector('')
 }
+
+	// const header = document.querySelector('#top-wrap');
+
+	// header.addEventListener('click', () => {
+	// 	nav_x.classList.remove('open');
+	// 	login_form.style.display='none';
+	// 	navMenuIcon.style.opacity='1';
+	//  });
+

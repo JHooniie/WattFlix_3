@@ -26,7 +26,7 @@
 
 			<div id="content">
 
-				<div id="box">
+				<div id="box" style="text-align:center;">
 					박스 오피스 순위<br>
 				</div>
 
