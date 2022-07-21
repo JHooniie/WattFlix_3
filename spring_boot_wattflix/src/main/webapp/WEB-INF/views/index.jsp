@@ -8,6 +8,7 @@
 <!-- navbar -->
 <c:import url="/WEB-INF/views/layout/nav.jsp" />
 
+
 <!-- main 안쪽에 작성하신 div 넣어주세요 -->
 <main id="main">
 
@@ -65,6 +66,7 @@
 						<span class="material-symbols-outlined" id="bookmark1"
 							onclick="bookmark(this.id)"><i
 							class="fa-regular fa-bookmark"></i></span>
+
 					</div>
 				</a>
 

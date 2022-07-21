@@ -37,7 +37,7 @@ public class MovieService implements IMovieService {
 		return dao.actionMovieList();
 	}
   
-  @Override
+	@Override
 	public ArrayList<MovieVO> movieSearch(HashMap<String, Object> map) {
 		return dao.movieSearch(map);
 	}

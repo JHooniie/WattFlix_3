@@ -27,11 +27,13 @@
 	flex-wrap: wrap;
 }
 
+
 .contents-banner {
 	font-size: 30pt;
 	padding-left: 140px;
 	margin-bottom: 20px;
 	color: #D7E1E1;
+
 }
 
 .contents-banner>span {
@@ -95,8 +97,10 @@
 }
 
 .movie:hover {
+
 	opacity: 0.5;
 	transition-duration: 0.5s;
+
 }
 
 #movie-info {
