@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 
     // 소제목
-    let $userName = "왓플릭스";
+    // let $userName = "왓플릭스";
     $('.contents-banner span').html($userName+" 님이 보고 싶은 영화");
 
 
