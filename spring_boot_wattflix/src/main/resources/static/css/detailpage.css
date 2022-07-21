@@ -17,6 +17,7 @@
     /* border: red 1px solid; */
 }
 
+
 #information {
     display: flex;
     flex-direction: row;
@@ -209,6 +210,21 @@
     border-radius: 10px;
     
 }
+
+/* 별점 */
+#star a{
+   text-decoration: none;
+   color: grey;
+   font-size: 2rem;
+   
+  }
+  #star a.on{
+   color: gold;
+  }
+  
+
+
+
 
 
 

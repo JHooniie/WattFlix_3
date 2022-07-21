@@ -33,9 +33,8 @@ ICommentDAO dao;
 	}
 
 	@Override
-	public ArrayList<CommentVO> listAllComment() {
+	public ArrayList<CommentVO> listAllComment(String movieNo) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.listAllComment(movieNo);
 	}
-
 }

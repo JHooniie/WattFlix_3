@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_wattflix.project.dao.ICommentDAO">
+  
+  	<!-- 댓글 추가 -->
+  	<insert id="insertComment" parameterType="com.spring_boot_wattflix.project.model.CommentVO">
+  		INSERT INTO comment (movieNo, memId, comment)
+  		VALUES(#{movieNo}, #{memId}, #{comment})
+  	</insert>
+  	
+  	<!-- 댓글 목록 출력 -->
+  	<select id="listAllComment" parameterType="string" resultType="com.spring_boot_wattflix.project.model.CommentVO">
+  		<!-- SELECT m.memNickname, c.comment
+  		FROM member m, comment c, movie mv
+  		WHERE mv.movieNo = c.movieNo AND c.movieNo=#{movieNo} -->
+  		
+  		SELECT * 
+  		FROM comment c, movie m 
+  		WHERE c.movieNo = m.movieNo AND c.movieNo=#{movieNo}
+  	</select>
+  
+  </mapper>
