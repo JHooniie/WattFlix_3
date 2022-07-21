@@ -18,8 +18,8 @@ public interface IMovieDAO {
 public MovieVO RecMovieGenAction();
 public MovieVO recMovieGenDrama();
 	
-	public void insertMovieScore(MovieScoreVO msv); // 평가한 영화 저장
-	
+	//public void insertMovieScore(MovieScoreVO msv); // 평가한 영화 저장
+	public void insertMovieScore(HashMap<String, Object> param);
 	ArrayList<MovieScoreVO> getMovieScoreInfo(String memId); // 평가한 영화 조회
 	
 	// test 전체 조회

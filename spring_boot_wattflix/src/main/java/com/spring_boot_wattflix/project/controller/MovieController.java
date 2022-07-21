@@ -10,8 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.spring_boot_wattflix.project.model.MovieScoreVO;
 import com.spring_boot_wattflix.project.model.MovieVO;
 import com.spring_boot_wattflix.project.service.MovieService;
 
@@ -99,13 +100,23 @@ public class MovieController {
 	 * 
 	 * // DB에 데이터 저장한 후 전체 상품 조회 화면으로 포워딩 return "redirect:./productAllList"; }
 	 */
+	/*
+	 * @RequestMapping("/movie/insertMovieScore") public String
+	 * insertMovieScore(MovieScoreVO msv, Model model) {
+	 * movieService.insertMovieScore(msv);
+	 * 
+	 * model.addAttribute("movieNo", msv.getMovieNo());
+	 * 
+	 * return "redirect:/movie/detailMovie"; // 뷰페이지 아님 : @RequestMapping로 보내는 것임 :
+	 * 요청을 포워딩시키는 것임 }
+	 */
+	
+	@ResponseBody
 	@RequestMapping("/movie/insertMovieScore")
-	public String insertMovieScore(MovieScoreVO msv, Model model) {
-		movieService.insertMovieScore(msv);
+	public String insertMovieScore(@RequestParam HashMap<String, Object> param) {
 		
-		model.addAttribute("movieNo", msv.getMovieNo());
-			
-		return "redirect:/movie/detailMovie";  // 뷰페이지 아님 : @RequestMapping로 보내는 것임 : 요청을 포워딩시키는 것임
+		movieService.insertMovieScore(param);			
+		return "ok";  // 뷰페이지 아님 : @RequestMapping로 보내는 것임 : 요청을 포워딩시키는 것임
 	}
 	
 	
@@ -123,7 +134,7 @@ public class MovieController {
 	}
 	 */
 	
-}
+
 
 
 

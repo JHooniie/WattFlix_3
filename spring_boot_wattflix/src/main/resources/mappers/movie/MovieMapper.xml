@@ -51,7 +51,12 @@
  
 
 	<!-- 평가한 영화 리스트에 추가 -->
-	<select id="insertMovieScore" parameterType="com.spring_boot_wattflix.project.model.MovieScoreVO">
+	<!-- <select id="insertMovieScore" parameterType="com.spring_boot_wattflix.project.model.MovieScoreVO">
+		INSERT INTO moviescores (memId, movieNo, movieScore)
+		VALUES(#{memId}, #{movieNo}, #{movieScore})
+	</select> -->
+	
+	<select id="insertMovieScore" parameterType="hashmap">
 		INSERT INTO moviescores (memId, movieNo, movieScore)
 		VALUES(#{memId}, #{movieNo}, #{movieScore})
 	</select>
@@ -59,11 +64,10 @@
 	<!-- 평가한 영화 리스트 출력 -->
 	<select id="getMovieScoreInfo" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieScoreVO">
 		SELECT m.movieNo, m.moviePoster, ms.movieScore
-		FROM member m, moviescores ms
+		FROM movie m, moviescores ms
 		WHERE m.movieNo = ms.movieNo AND ms.memId=#{memId}
 	</select>
   
-  </mapper>
   
 
 	<select id="movieSearch" parameterType="hashmap" resultMap="movieResult">
@@ -84,5 +88,5 @@
   		</choose>
   	</select>
 
-  </mapper>
+  </mapper> 
 
