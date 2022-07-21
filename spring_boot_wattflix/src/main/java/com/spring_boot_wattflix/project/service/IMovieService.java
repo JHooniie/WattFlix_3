@@ -3,6 +3,7 @@ package com.spring_boot_wattflix.project.service;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.spring_boot_wattflix.project.model.MovieScoreVO;
 import com.spring_boot_wattflix.project.model.MovieVO;
 
 public interface IMovieService {
@@ -13,8 +14,9 @@ public interface IMovieService {
 	public ArrayList<MovieVO> actionMovieList();
 	
 
-	ArrayList<MovieVO> movieSearch(HashMap<String, Object> map);// 영화 검색 결과
-
+	public void insertMovieScore(MovieScoreVO msv); // 평가한 영화 저장
+	
+	ArrayList<MovieScoreVO> getMovieScoreInfo(String memId); // 평가한 영화 조회
 
 	
 	// test 전체 조회
