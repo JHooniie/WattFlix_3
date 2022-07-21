@@ -41,6 +41,17 @@ public class MemberController {
 		
 		return "index";
 	}
+	
+	
+	/*
+	 * // 회원탈퇴
+	 * 
+	 * @RequestMapping("/member/unregister") public String loginCheck(@RequestParam
+	 * HashMap<String, Object> param, HttpSession session) { String memId =
+	 * (String)session.getAttribute("sid");
+	 * 
+	 * return "/"; }
+	 */
 
 	// 로그인 처리
 //	@ResponseBody

@@ -27,9 +27,12 @@ public class MovieService implements IMovieService {
 
 	@Override
 	public ArrayList<MovieVO> listAllMovie() {
-		// TODO Auto-generated method stub
 		return dao.listAllMovie();
 	}
 
+	@Override
+	public ArrayList<MovieVO> actionMovieList() {
+		return dao.actionMovieList();
+	}
 
 }

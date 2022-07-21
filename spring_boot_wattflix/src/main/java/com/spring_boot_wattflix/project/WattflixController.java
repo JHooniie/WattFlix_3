@@ -45,7 +45,7 @@ public class WattflixController {
 
 	@RequestMapping("/movie/todayMovieView")
 	public String todayMovieView() {
-		return "movie/todayMovieView";
+		return "movie/todaymovie";
 	}
 
 //	 contents 이동
