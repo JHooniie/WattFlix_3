@@ -28,7 +28,7 @@
   	
   	<!-- 삭제 -->
   	<delete id="deleteMymovie" parameterType="hashMap">
-  		DELETE * FROM myMovie WHERE memId=#{memId} AND movieNo=#{movieNo}
+  		DELETE * FROM myMovie WHERE myMovieNo=#{myMovieNo}
  	</delete>
  	
 

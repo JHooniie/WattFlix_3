@@ -52,22 +52,12 @@
                         </a>
                     </li>
                    <c:forEach items="${ myMovieList}" var="like">
-<%-- 	                    <li class="movieItem">
-	                        <a href="<c:url value='/movie/detailMovie/${mmv.movieNo}'/>">
-	                            <div class="moviePoster marked">
-	                                <img src="${mmv.moviePoster}">
-	                                <div class="movieInfo">
-	                                    <caption class="movieTitle">${mmv.movieTitle }</caption>
-	                                </div>
-	                            </div>
-	                        </a>
-	                    </li> --%>
 	                    
 	                    <div class="card movie">
 						  		<img src="<c:url value='${like.moviePoster }'/>" width="220" height="320">
 							  	<div class="inner-content">
 									<div class="movie-info-title">
-										<a href="<c:url value='/mymovie/deleteLike/${like.movieNo}'/>"> 
+										<a href="<c:url value='/mymovie/deleteMymovie/${like.myMovieNo}'/>"> 
 											<i class="fa-solid fa-heart fa-2xl"></i>
 										</a>
 										<br>
