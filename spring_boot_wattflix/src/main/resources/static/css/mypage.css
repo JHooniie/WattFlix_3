@@ -4,11 +4,11 @@ div {
 	border-radius: 10px;
 }
 
-.container {
+/* .container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-}
+} */
 
 .mypage_box {
 	/* border: 1px solid white; */
