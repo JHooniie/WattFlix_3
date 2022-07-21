@@ -21,6 +21,9 @@
 	</head>
 	
 	<body>
+		<!-- top bar -->
+		<c:import url="/WEB-INF/views/layout/top.jsp" />
+	
    		<!-- navbar -->
 		<c:import url="/WEB-INF/views/layout/nav.jsp" />
 

@@ -48,17 +48,11 @@
 									<button class="greenBtn" type="submit" style="width:200px;">
 										<span>Login</span>
 									</button><br>
-									
-									
-										<!-- 충돌 시 이 부분으로 할 것!!!!! -->
-										<a href="<c:url value="/member/signupFormView"/>"><input type="button" class="whiteBtn" value="Sign up"></a>
-										<!-- <button class="whiteBtn" style="width:200px;">
+									<a href="<c:url value="/member/signupFormView"/>">
+										<button class="whiteBtn" style="width:200px;">
 											<span>Sign up</span>
-										</button> -->
-									
-										
-									
-									
+										</button>
+									</a>
 								</form>
 							</div>
 
@@ -66,8 +60,8 @@
 					
 						<!-- 로그인 성공한 경우 보여줄 메뉴 항목 -->
 						<c:if test="${not empty sessionScope.sid }">
-							<a href="<c:url value='/member/mypage2'/>">${sessionScope.sid }</a> 님 환영합니다 :)    
-						  	<a href="<c:url value='/member/updateForm'/>"> 회원정보 수정</a>
+							${sessionScope.sid } 님 환영합니다 :)    
+						  	<a href="<c:url value='member/update'/>"> 회원정보 수정</a>
 							<a href="<c:url value='/logout'/>"> 로그아웃</a>
 						</c:if>
 		</header>
