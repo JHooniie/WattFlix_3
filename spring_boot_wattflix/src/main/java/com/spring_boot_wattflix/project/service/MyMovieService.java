@@ -18,8 +18,8 @@ public class MyMovieService implements IMyMovieService {
 	IMyMovieDAO dao;
 	
 	@Override
-	public void insertMymovie(MyMovieVO vo) {
-		dao.insertMymovie(vo);
+	public void insertLike(MyMovieVO vo) {
+		dao.insertLike(vo);
 	}
 
 	@Override
@@ -35,12 +35,30 @@ public class MyMovieService implements IMyMovieService {
 		dao.deleteMymovie(map);
 	}
 
+//	public int checkMymovie(MyMovieVO vo) {
+//		HashMap<String,Object> map = new HashMap<String,Object>();
+//		map.put("memId", memId);
+//		map.put("movieNo", movieNo);
+//		return dao.checkMymovie(vo);
+//	}
+
+	@Override
+	public void insertDislike(MyMovieVO vo) {
+		dao.insertDislike(vo);
+	}
+
 	public int checkMymovie(String movieNo, String memId) {
 		HashMap<String,Object> map = new HashMap<String,Object>();
 		map.put("memId", memId);
 		map.put("movieNo", movieNo);
 		return dao.checkMymovie(map);
 	}
+
+//	@Override
+//	public int checkMymovie(MyMovieVO vo) {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
 
 
 
