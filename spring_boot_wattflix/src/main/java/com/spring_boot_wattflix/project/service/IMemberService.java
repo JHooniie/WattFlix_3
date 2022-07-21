@@ -27,6 +27,4 @@ public interface IMemberService {
 	// 회원 탈퇴
 	public void deleteMember(String memId);
 	
-	// 회원 정보 수정
-			public void memberUpdate(MemberVO memVo);
 }
