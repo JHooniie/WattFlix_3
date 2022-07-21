@@ -32,7 +32,7 @@
 			<div class="contents-event">
 
 				<figure class="event_img">
-					<img id="event_img" src="../image/event_movie_worldcup.png">
+					<img id="event_img" src="../image/event_movie_moviebti.png">
 				</figure>
 
 			</div>
@@ -40,7 +40,7 @@
 			<div class="contents-event">
 
 				<figure class="event_img">
-					<img id="event_img" src="../image/event_movie_worldcup.png">
+					<img id="event_img" src="../image/event_movie_what.png">
 				</figure>
 
 			</div>
