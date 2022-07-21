@@ -36,6 +36,4 @@
   		SELECT * FROM movie WHERE movieGenre=#{movieGenre}
  	</select>
  
-
-  
   </mapper>
