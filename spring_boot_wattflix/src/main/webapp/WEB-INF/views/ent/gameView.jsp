@@ -1,12 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    
-		<!-- top bar -->
-			<c:import url="/WEB-INF/views/layout/top.jsp" />
-
-			<!-- navbar -->
-			<c:import url="/WEB-INF/views/layout/nav.jsp" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!-- <!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="minimum-scale=10">
+        <title>WattFlix</title> -->
+<%--         <link rel="stylesheet" href="<c:url value='/css/common.css'/>">
+        <link rel="stylesheet" href="<c:url value='/css/index.css'/>"> --%>
+        <link rel="stylesheet" href="<c:url value='/css/vsgame.css'/>">
+<%--         <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+        <script src="<c:url value='/jsCustom/index.js'/>"></script> --%>
+        <script src="<c:url value='/jsCustom/vsgame.js'/>"></script>
+            
+    </head>
+    <body onload="preLoaingImg()">
+    	<!-- navbar -->
+    			<c:import url="/WEB-INF/views/layout/top.jsp" />
+    	
+		<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
     <div class="wrap">
       <header>
@@ -23,7 +38,6 @@
         <button id="reselect" onclick="vsgame.Event.clickCancel()">이전으로</button>
       </footer>
     </div>
-    <script src="jsCustom/vsgame.js?ver=2" async defer></script>
     <script>
       function start() {
         vsgame.start();
@@ -45,6 +59,7 @@
         tObj.appendChild(hiddenNode);
       }
     </script>
+  </body>	
+      
     
-  </body>
 </html>
