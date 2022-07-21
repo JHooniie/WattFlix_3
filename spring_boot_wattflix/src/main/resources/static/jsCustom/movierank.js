@@ -25,7 +25,7 @@ $(function() {
             });
     });
    
-    $("#boxoffice").on("click",".movie-item", function(){
+    $("#boxoffice").one("click",".movie-item", function(){
         let d = $(this);
         let movieCd = d.attr("id");
         let url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=f5eef3421c602c6cb7ea224104795888&movieCd="+movieCd;
