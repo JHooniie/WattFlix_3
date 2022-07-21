@@ -33,6 +33,8 @@
                     
                 </div>
                 
+                 <form id="signup-form" name="signup-form" method="post" action="<c:url value='/member/update'/>">
+                         <div id="update-content">
                             <!-- MAIL -->
                            
 							<c:if test="${not empty sessionScope.sid }">
@@ -79,12 +81,12 @@
                             <div class="signup-footer">
                                 <button class="greenBtn" id="submitBtn" name="submitBtn" type="submit">회원 정보 수정하기</button>
                             </div>
+                            </div>
+                            </form>
                         </div>
                         									
                         
-                    </form>
-                </div>
-            </div>
+    
         </main>
     </body>
 </html>
