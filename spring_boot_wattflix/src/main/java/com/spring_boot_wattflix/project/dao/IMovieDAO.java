@@ -15,8 +15,8 @@ public interface IMovieDAO {
 
 	ArrayList<MovieVO> movieSearch(HashMap<String, Object> map);// 영화 검색 결과
 	
-public MovieVO RecMovieGenAction();
-public MovieVO recMovieGenDrama();
+	public MovieVO RecMovieGenAction();
+	public MovieVO recMovieGenDrama();
 	
 	//public void insertMovieScore(MovieScoreVO msv); // 평가한 영화 저장
 	public void insertMovieScore(HashMap<String, Object> param);

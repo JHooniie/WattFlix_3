@@ -19,6 +19,22 @@
 <script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>"
 	crossorigin="anonymous"></script>
 <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+
+
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+	crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+	crossorigin="anonymous"></script>
+
+
 <script src="<c:url value='/jsCustom/index.js'/>"></script>
 <script src="<c:url value='/jsCustom/main.js'/>"></script>
 <script src="<c:url value='/jsCustom/movierank.js'/>"></script>
@@ -29,17 +45,22 @@
 	<!-- TOP HEAD -->
 	<header id="top-wrap">
 		<div class="top-container">
+
+
 			<!-- 로그인 하지 않은 경우 보여줄 메뉴 항목 -->
 			<c:if test="${empty sessionScope.sid }">
 				<div class="top-member">
+
 					<!-- login -->
 					<div class="top-contents">
-						<a onclick="login_dropdown()" class="member-item"> <span
-							class="link-text"> <i
-								class="fa-solid fa-right-to-bracket fa-lg"></i> Login
-						</span>
+						<a onclick="login_dropdown()"> <input type="button"
+							class="top-contents-btn" style="width: 100%;" value="Login">
+						</a> <a href="<c:url value="/member/signupFormView"/>"> <input
+							type="button" class="top-contents-btn" style="width: 100%;"
+							value="Sign Up">
 						</a>
 					</div>
+
 					<div id="login-div">
 						<form id="loginForm" name="loginForm" method="post"
 							action="<c:url value='/member/login'/>">
@@ -49,27 +70,46 @@
 									name="memPwd">
 
 							</div>
-							<button class="greenBtn" type="submit" style="width: 200px;">
+							<button class="greenBtn" type="submit" style="width: 222px;">
 								<span>Login</span>
 							</button>
-							<br> <a href="<c:url value="/member/signupFormView"/>">
-								<button class="whiteBtn" style="width: 200px;">
-									<span>Sign up</span>
-								</button>
-							</a>
+							<br>
+
+
+
 						</form>
 					</div>
+				</div>
 			</c:if>
-
 
 			<!-- 로그인 성공한 경우 보여줄 메뉴 항목 -->
 			<c:if test="${not empty sessionScope.sid }">
-							${sessionScope.sid } 님 환영합니다 :)    
-						  	<a href="<c:url value='member/update'/>"> 회원정보 수정</a>
-				<a href="<c:url value='member/vsgame'/>">오늘 뭐 볼까?</a>
 
-				<a href="<c:url value='/logout'/>"> 로그아웃</a>
+				<div class="dropdown" id="top-contents-login">
+					<button class="btn btn-secondary dropdown-toggle" type="button"
+						data-bs-toggle="dropdown" aria-expanded="false">${sessionScope.sid }
+						님 환영합니다 :)
+					</button>
+					<ul class="dropdown-menu">
+					
+						<li><a class="dropdown-item"
+							href="<c:url value='/member/mypageView'/>">마이페이지</a></li>
+							
+						<li><a class="dropdown-item"
+							href="<c:url value='/member/updateForm'/>">회원정보 수정</a></li>
+							
+						<li><a class="dropdown-item" href="<c:url value='/logout'/>">로그아웃</a></li>
+					</ul>
+				</div>
 
 
+				<%-- <div>
+					<a href="<c:url value='/member/mypage2'/>">${sessionScope.sid }</a>
+					님 환영합니다 :) <a href="<c:url value='/member/updateForm'/>"> 회원정보
+						수정</a> <a href="<c:url value='/logout'/>"> 로그아웃</a>
+				</div> --%>
 			</c:if>
+
+		</div>
+
 	</header>
