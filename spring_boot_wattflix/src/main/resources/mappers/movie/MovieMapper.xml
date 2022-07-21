@@ -36,6 +36,7 @@
   		SELECT * FROM movie WHERE movieGenre=#{movieGenre}
  	</select>
  
+
 	<select id="movieSearch" parameterType="hashmap" resultMap="movieResult">
   		SELECT * FROM movie WHERE
   		<choose>
@@ -53,5 +54,5 @@
   			</when>
   		</choose>
   	</select>
-  
+
   </mapper>
