@@ -43,6 +43,7 @@ public class MemberService implements IMemberService {
 		return dao.loginCheck(map);
 	}
 
+
 	//업데이트
 	@Override
 	public void memberUpdate(MemberVO memVo) {
@@ -66,5 +67,6 @@ public class MemberService implements IMemberService {
 	}
 
 		
+
 
 }

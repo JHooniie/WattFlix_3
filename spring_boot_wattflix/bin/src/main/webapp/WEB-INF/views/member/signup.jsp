@@ -1,25 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<!-- <!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="viewport" content="minimum-scale=10">
-        <title>WattFlix</title> -->
         
         <link rel="stylesheet" href="<c:url value='/css/signup.css'/>">
         
         <script src="<c:url value='/jsCustom/signup.js'/>"></script>
-        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
         <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script src="<c:url value='/js/searchZip.js'/>"></script>
             
     </head>
     <body>
+    	<!-- top bar -->
+		<c:import url="/WEB-INF/views/layout/top.jsp" />
+    
     	<!-- navbar -->
 		<c:import url="/WEB-INF/views/layout/nav.jsp" />
     	
@@ -153,7 +146,7 @@
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-romentic" value="romentic"></td><td><label class="chkLabel" for="gr-romentic">로맨틱</label></td>
-                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-mystery" value="mystery"></td><td><label class="chkLabel" for="gr-mystery">미스터리</label></td>
+                                    <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-drama" value="drama"></td><td><label class="chkLabel" for="gr-drama">드라마</label></td>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-adventure" value="adventure"></td><td><label class="chkLabel" for="gr-adventure">모험</label></td>
                                     <td><input type="checkbox" class="chkBox" name="memGenre" id="gr-sfFantagy" value="sfFantagy"></td><td><label class="chkLabel" for="gr-sfFantagy">SF/판타지</label></td>
                                 </tr>

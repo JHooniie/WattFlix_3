@@ -26,4 +26,5 @@ public interface IMemberService {
 	
 	// 회원 탈퇴
 	public void deleteMember(String memId);
+	
 }

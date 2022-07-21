@@ -114,7 +114,6 @@ public class MemberController {
 	// 프로필 사진 업로드
 	@RequestMapping("/fileUpload")
 	public String viewFileUpload(@RequestParam("uploadFile") MultipartFile file, Model model) throws IOException {
-		
 		// 1. 파일 저장 경로 설정 : 실제 서비스되는 위치 (프로젝트 외부에 저장)
 		String uploadPath = "C:///springWorkSpace/upload/";
 		
@@ -144,4 +143,5 @@ public class MemberController {
 	
 		return "member/update";	
 	}
+
 }

@@ -20,10 +20,11 @@
     </head>
 
 <body>
-	<!-- top bar -->
-			<c:import url="/WEB-INF/views/layout/top.jsp" />
 
-    <!-- navbar -->
+   	<!-- top bar -->
+	<c:import url="/WEB-INF/views/layout/top.jsp" />
+	
+	<!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
     <!-- main 안쪽에 작성하신 div 넣어주세요 -->
