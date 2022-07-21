@@ -6,7 +6,6 @@
 <!-- top bar -->
 <c:import url="/WEB-INF/views/layout/top.jsp" />
 
-
 <!-- navbar -->
 <c:import url="/WEB-INF/views/layout/nav.jsp" />
 
@@ -21,6 +20,7 @@
 		</div>
 
 		<div class="contents-events">
+
 
 			<div class="contents-event">
 
@@ -68,12 +68,11 @@
 							</a> <br> <br> <br> <br> <br>
 							<h3>${mo.movieTitle }</h3>
 							<a href="<c:url value='/movie/detailMovie/${mo.movieNo}'/>">
-								<input type="button" class="whiteBtn" value="상세정보">
+								<input type="button" class="greenBtn" style="background-color:none;" value="상세정보">
 							</a>
 						</div>
 					</div>
 				</div>
-
 
 			</c:forEach>
 

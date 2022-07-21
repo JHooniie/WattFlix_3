@@ -109,6 +109,10 @@ input, select {
 
 /* ************** 로고 *************** */
 
+.icon-item {
+    z-index: 10;
+}
+
 .mainLogo_big {
     font-size: 60px;
     font-family: PyeongChangPeace-Bold;

@@ -39,7 +39,3 @@ window.onload = function (){
 	// 	navMenuIcon.style.opacity='1';
 	//  });
 
-
-
-
-

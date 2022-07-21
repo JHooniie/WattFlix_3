@@ -131,6 +131,7 @@
 								name="hp_nationalNum">
 								<option value="82">대한민국 +82</option>
 							</select> <input class="signup-input" type="text" id="memHp" name="memHp"
+								style="width:295px; display:inline-block;" 
 								placeholder="전화번호 입력">
 							<button class="whiteBtn" id="memHpCheckBtn" name="memHpCheckBtn"
 								onclick="hpCheck()">인증받기</button>
@@ -138,8 +139,10 @@
 								name="memHpCheck" placeholder="인증번호 입력하세요.">
 						</div>
 						<br> <label>주소</label> <input class="signup-input"
-							type="text" id="memZipcode" name="memZipcode" placeholder="우편번호"
-							readonly> <input type="button" id="searchZipBtn"
+							type="text" id="memZipcode" name="memZipcode"
+							style="width:295px; display:inline-block;"
+							placeholder="우편번호"
+							readonly> <input class="whiteBtn" type="button" id="searchZipBtn"
 							name="searchZipBtn" value="우편번호 찾기"><br> <input
 							class="signup-input" type="text" id="memAddress1"
 							name="memAddress1" placeholder="주소 입력" readonly> <input

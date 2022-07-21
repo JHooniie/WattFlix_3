@@ -44,7 +44,7 @@ public class MemberController {
 		
 		} catch (ParseException e) {};
 		
-		return "index";
+		return "member/joined";
 	}
 	
 	// 회원 정보 수정
