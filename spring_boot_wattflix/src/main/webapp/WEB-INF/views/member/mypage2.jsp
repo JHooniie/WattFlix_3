@@ -91,10 +91,8 @@
 						</div>
 
 						<div id="profile_box_a">
-
 							<a href="index.html" class="a_item">
 							<span class="link-text">평가한 영화</span>
-
 							<i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
 							</a>
 						</div>

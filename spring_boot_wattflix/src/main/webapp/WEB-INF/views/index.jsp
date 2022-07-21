@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+
 <!-- top bar -->
 <c:import url="/WEB-INF/views/layout/top.jsp" />
 
@@ -17,7 +18,7 @@
 		<div class="contents-banner">
 			<span id="plain-text">Home</span>
 		</div>
-		
+
 		<div class="contents-events">
 
 
@@ -48,35 +49,38 @@
 		</div>
 
 
-
 		<div class="contents-banner">
 			<span id="plain-text">WattFlix 인기 작품</span>
 		</div>
 
 		<div class="contents-scroll" id="contents-scroll">
+
 			<c:forEach items="${movieList }" var="mo">
 
-				<a class="movie"
-					href="<c:url value='/movie/detailMovie/${mo.movieNo}'/>"> <img
-					src="<c:url value='${mo.moviePoster }'/>" width="220" height="320">
-					<div id="movie-info">
-						<div>
-							<p>${mo.movieTitle }</p>
-						</div>
-						<span class="material-symbols-outlined" id="bookmark1"
-							onclick="bookmark(this.id)"><i
-							class="fa-regular fa-bookmark"></i></span>
 
+				<div class="card movie">
+					<img src="<c:url value='${mo.moviePoster }'/>" width="220"
+						height="320">
+					<div class="inner-content">
+						<div class="movie-info-title">
+							<a href="<c:url value='/mymovie/insertLike/${mo.movieNo}'/>">
+								<i class="fa-regular fa-heart fa-2xl"></i>
+							</a> <br> <br> <br> <br> <br>
+							<h3>${mo.movieTitle }</h3>
+							<a href="<c:url value='/movie/detailMovie/${mo.movieNo}'/>">
+								<input type="button" class="whiteBtn" value="상세정보">
+							</a>
+						</div>
 					</div>
-				</a>
+				</div>
 
 			</c:forEach>
+
 		</div>
 		<br> <br> <br> <br> <br>
 
 	</div>
 </main>
-
 
 </body>
 </html>

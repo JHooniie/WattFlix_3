@@ -14,7 +14,7 @@
 
 <body>
     <!-- top bar -->
-			<c:import url="/WEB-INF/views/layout/top.jsp" />
+	<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 	<!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
@@ -51,8 +51,8 @@
                             </div>
                         </a>
                     </li>
-                   <c:forEach items="${ myMovieList}" var="mmv">
-	                    <li class="movieItem">
+                   <c:forEach items="${ myMovieList}" var="like">
+<%-- 	                    <li class="movieItem">
 	                        <a href="<c:url value='/movie/detailMovie/${mmv.movieNo}'/>">
 	                            <div class="moviePoster marked">
 	                                <img src="${mmv.moviePoster}">
@@ -61,7 +61,27 @@
 	                                </div>
 	                            </div>
 	                        </a>
-	                    </li>
+	                    </li> --%>
+	                    
+	                    <div class="card movie">
+						  		<img src="<c:url value='${like.moviePoster }'/>" width="220" height="320">
+							  	<div class="inner-content">
+									<div class="movie-info-title">
+										<a href="<c:url value='/mymovie/deleteLike/${like.movieNo}'/>"> 
+											<i class="fa-solid fa-heart fa-2xl"></i>
+										</a>
+										<br>
+										<br>
+										<br>
+										<br>
+										<br>
+										<h3>${like.movieTitle }</h3>
+										<a href="<c:url value='/movie/detailMovie/${like.movieNo}'/>">
+											<input type="button" class="whiteBtn" value="상세정보">
+										</a>
+									</div>
+							  	</div>
+							</div>
                     </c:forEach>
                 </ol>
             </div> <!--Container -->
