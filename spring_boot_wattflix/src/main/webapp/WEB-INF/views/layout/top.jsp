@@ -69,5 +69,6 @@
 							<a href="<c:url value='/member/mypage2'/>">${sessionScope.sid }</a> 님 환영합니다 :)    
 						  	<a href="<c:url value='/member/updateForm'/>"> 회원정보 수정</a>
 							<a href="<c:url value='/logout'/>"> 로그아웃</a>
+
 						</c:if>
 		</header>

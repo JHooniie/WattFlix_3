@@ -19,6 +19,8 @@
     </head>
     <body>
     	<!-- navbar -->
+    			<c:import url="/WEB-INF/views/layout/top.jsp" />
+    	
 		<c:import url="/WEB-INF/views/layout/nav.jsp" />
     	
         <!-- main 안쪽에 작성하신 div 넣어주세요 -->
@@ -76,7 +78,6 @@
                             <br>
                             <div class="signup-footer">
                                 <button class="greenBtn" id="submitBtn" name="submitBtn" type="submit">회원 정보 수정하기</button>
-                         
                             </div>
                         </div>
                         									

@@ -27,4 +27,7 @@ public interface IMemberDAO {
 	
 	// 회원 탈퇴
 	public void deleteMember(String memId);
+	
+	// 회원소개/정보 수정
+	public void memberUpdate(MemberVO memVo);
 }
