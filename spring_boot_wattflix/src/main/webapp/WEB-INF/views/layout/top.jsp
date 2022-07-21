@@ -56,6 +56,7 @@
 						<c:if test="${not empty sessionScope.sid }">
 							${sessionScope.sid } 님 환영합니다 :)    
 						  	<a href="<c:url value='member/update'/>"> 회원정보 수정</a>
-							<a href="<c:url value='/logout'/>"> 로그아웃</a>
+						  	<a href="<c:url value='member/vsgame'/>"> 오늘은 뭐 볼까? </a>
+						  	<a href="<c:url value='/logout'/>"> 로그아웃</a>
 						</c:if>
 		</header>

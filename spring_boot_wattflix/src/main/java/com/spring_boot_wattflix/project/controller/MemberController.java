@@ -79,4 +79,11 @@ public class MemberController {
 		
 			return "member/update";	
 		}
+		
+		// 회원 정보 수정 
+				@RequestMapping("/member/updateForm")
+				public String memberUpdate() {
+				
+					return "member/update";	
+				}
 }

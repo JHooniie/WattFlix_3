@@ -39,5 +39,9 @@ public class MemberService implements IMemberService {
 	public String loginCheck(HashMap<String, Object> map) {
 		return dao.loginCheck(map);
 	}
-
+	//업데이트
+			@Override
+			public void memberUpdate(MemberVO memVo) {
+				dao.memberUpdate(memVo);
+			}
 }
