@@ -11,6 +11,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WatFlix</title>
+        <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+        
+		<script>
+	        
+	        function scoresChange(num) {
+	        	var answer = confirm("평점 등록하겠습니까?");
+				if(answer == true){
+					$('#movieScore').val(num);
+					$('#movieScoreForm').submit();
+				}
+				
+	        	// 결과값 반영
+	        	//${scoreList.movieScore} = num;
+	        }
+	        
+	       
+	        
+        </script>
+        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
         <link rel="stylesheet" type="text/css" href="<c:url value='/css/detailpage.css'/>"> 
@@ -20,6 +39,8 @@
     </head>
 
 <body>
+	<!-- top bar -->
+	<c:import url="/WEB-INF/views/layout/top.jsp" />
     <!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
@@ -48,16 +69,24 @@
                    
                    	<!-- 별점 -->
                    	<!-- value="1"인 부분은 database에 넣은 실 때 값을 가져와 사용하시면 됩니다. -->
+                   	<c:if test="${not empty sessionScope.sid }">
                     <div>
                     <P id="star">
-					   <a href="#" value="1">★</a>
-					   <a href="#" value="2">★</a>
-					   <a href="#" value="3">★</a>
-					   <a href="#" value="4">★</a>
-					   <a href="#" value="5">★</a>
+					   <a href="#" value="1" onClick="scoresChange(1)">★</a>
+					   <a href="#" value="2" onClick="scoresChange(2)">★</a>
+					   <a href="#" value="3" onClick="scoresChange(3)">★</a>
+					   <a href="#" value="4" onClick="scoresChange(4)">★</a>
+					   <a href="#" value="5" onClick="scoresChange(5)">★</a>
 					<p>
 					
+					<form id="movieScoreForm" method="post" action = "<c:url value='/movie/insertMovieScore'/>"> 
+						<input type="hidden"  name="memId"   value="${sessionScope.sid}">
+						<input type="hidden"  name="movieNo"   value="${movie.movieNo}">
+						<input type="hidden"  id="movieScore" name="movieScore"   value="0">
+					</form>
+					
 					</div>
+					</c:if>
                     
                     
                 </div>

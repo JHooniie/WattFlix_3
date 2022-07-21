@@ -2,13 +2,15 @@ package com.spring_boot_wattflix.project.controller;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring_boot_wattflix.project.model.MovieScoreVO;
 import com.spring_boot_wattflix.project.model.MovieVO;
 import com.spring_boot_wattflix.project.service.MovieService;
 
@@ -59,10 +61,13 @@ public class MovieController {
 	
 	// 영화 상세 정보 조회 : /movie/detailMovie
 	@RequestMapping("/movie/detailMovie/{movieNo}")
-	public String detailViewMovie(@PathVariable String movieNo,
+	public String detailViewMovie(@PathVariable String movieNo, HttpSession session,
 								Model model) {
 		// 영화번호(movieNo) 전달, 해당 영화의 정보 반환
 		MovieVO movie = movieService.detailViewMovie(movieNo);
+		
+		String memId = (String)session.getAttribute("sid");
+		model.addAttribute("memId", memId);
 		
 		model.addAttribute("movie", movie);
 		
@@ -73,6 +78,37 @@ public class MovieController {
 		return "movie/detailpage";
 	}
 	
+	// 별점 누르면 DB 추가 
+	// 상품 등록 : 상품정보 DB 저장 (참고) 
+	/*
+	 * @RequestMapping("/product/insertProduct") public String
+	 * insertProduct(ProductVO prd) { prdService.insertProduct(prd);
+	 * 
+	 * // DB에 데이터 저장한 후 전체 상품 조회 화면으로 포워딩 return "redirect:./productAllList"; }
+	 */
+	@RequestMapping("/movie/insertMovieScore")
+	public String insertMovieScore(MovieScoreVO msv, Model model) {
+		movieService.insertMovieScore(msv);
+		
+		model.addAttribute("movieNo", msv.getMovieNo());
+			
+		return "redirect:/movie/detailMovie";  // 뷰페이지 아님 : @RequestMapping로 보내는 것임 : 요청을 포워딩시키는 것임
+	}
+	
+	
+	// 마이페이지에서 '평가한영화'버튼 눌렀을 때 조회 
+	//@RequestMapping("/movie/myPageMovieList/{memId}")
+	// return myPageMovieListView
+	/*
+	 * // 상품 정보 수정 폼 열기 요청 처리
+	@RequestMapping("/product/productUpdateForm/{prdNo}")
+	public String updateProductForm(@PathVariable String prdNo, Model model) {
+		// 수정할 상품번호 받아서, detailViewProduct()메소드 호출하면서 전달하고 해당 상품 정보(1개) 받아서 모델 설정
+		ProductVO prd = prdService.detailViewProduct(prdNo);
+		model.addAttribute("prd", prd);
+		return "product/productUpdateForm";
+	}
+	 */
 	
 }
 
