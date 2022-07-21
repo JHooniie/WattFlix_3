@@ -1,6 +1,7 @@
 package com.spring_boot_wattflix.project.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,14 @@ public class MovieController {
 	public String viewmovieSearch() {
 		return "movie/searchBox";
 	}
+	
+	@RequestMapping("/movie/movieSearchResult")
+	public String movieSearchResult(@RequestParam HashMap<String, Object> param, Model model) {
+		ArrayList<MovieVO> mvList = movieService.movieSearch(param);
+		model.addAttribute("mvList",mvList);
+		return "movie/moviesearchResultView";
+	}
+	
 	
 	@RequestMapping("/movie/movieRank")
 	public String viewMovieRank() {

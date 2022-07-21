@@ -13,6 +13,8 @@
     <!-- custom link -->
     <link rel="stylesheet" href="<c:url value='/css/searchBox.css'/>">
     <link rel="stylesheet" href="<c:url value='/css/animate.css'/>">
+    <script src="<c:url value='/js/jquery-3.6.0.min.js' />"></script>
+		<script src="<c:url value='/jsCustom/movieSearch.js' />"></script>
     <script src="<c:url value='/jsCustom/posterbook.js'/>"></script>
     <script src="<c:url value='/jsCustom/wow.min.js'/>"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -33,17 +35,30 @@
 	                    <button class="btn">#배우</button>
 	                    <button class="btn">#장르</button>
 	                </div>
-	                <div class="searchbarContainer"><label>
+	               
+	                        <form id="movieSearchFrm">
+						<select name="type">
+							<option value="">검색조건 검색</option>
+							<option value="movieTitle">제목</option>
+							<option value="movieGenre">장르</option>
+							<option value="movieDirector">감독</option>
+							<option value="movieActor">배우</option>
+						</select>
+						 <div class="searchbarContainer"><label>
 	                        <span class="material-symbols-outlined">
 	                            search
 	                        </span>
-	                        <input class="searchbar" type="text" placeholder="어떤 영화를 보고싶은가요?"></label>
-	                </div>
+	                         <input class="searchbar" name="keyword" type="text" placeholder="어떤 영화를 보고싶은가요?"></label>
+	               			 </div>
+						<input type="submit" value="검색">
+					</form>
+	                       
 	            </div> <!-- toolbar -->
 	            <!-- 중간 타이틀 -->
 	            <div class="contents-banner">
 	                <span id="plain-text">`${username}`이 보고싶은 영화</span>
 	            </div>
+	            
 	            <!-- 검색결과 컨테이너 -->
 	            <div class="container search-container w-100">
 	                <div class="row d-flex flex-row justify-content-between h-100 mt-4">
@@ -208,7 +223,7 @@
 	                    </div>
 	                  </div>
 	                </div>
-	
+					<div id="searchResultBox"></div>
 	              </div>
 	        </div>
 	    </main>
