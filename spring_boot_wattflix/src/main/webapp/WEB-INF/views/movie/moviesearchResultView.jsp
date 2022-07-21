@@ -8,24 +8,19 @@
     <meta charset="UTF-8">
    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchBox</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
     <!-- custom link -->
     <link rel="stylesheet" href="<c:url value='/css/searchBox.css'/>">
     <link rel="stylesheet" href="<c:url value='/css/animate.css'/>">
-    <script src="<c:url value='/jsCustom/posterbook.js'/>"></script>
+    <script src="<c:url value='/js/jquery-3.6.0.min.js' />"></script>
+	<script src="<c:url value='/jsCustom/movieSearch.js' />"></script>
+	<script src="<c:url value='/jsCustom/searchBox.js' />"></script>
     <script src="<c:url value='/jsCustom/wow.min.js'/>"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	</head>
 	
 	<body>
-	
-   	<!-- top bar -->
-	<c:import url="/WEB-INF/views/layout/top.jsp" />
-	
-	<!-- navbar -->
-	<c:import url="/WEB-INF/views/layout/nav.jsp" />
-
 	    <!-- main 안쪽에 작성하신 div 넣어주세요 -->
 	    <main>
 	        <div id="Container">
