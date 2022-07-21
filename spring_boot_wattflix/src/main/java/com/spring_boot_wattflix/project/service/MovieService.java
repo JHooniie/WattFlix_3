@@ -51,10 +51,9 @@ public class MovieService implements IMovieService {
 	}
 
 	@Override
-	public void insertMovieScore(MovieScoreVO msv) {
+	public void insertMovieScore(HashMap<String, Object> param) {
 		// TODO Auto-generated method stub
-		dao.insertMovieScore(msv);
+		dao.insertMovieScore(param);
 	}
-
 
 }

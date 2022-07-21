@@ -15,7 +15,7 @@
         
 		<script>
 	        
-	        function scoresChange(num) {
+	        /* function scoresChange(num) {
 	        	var answer = confirm("평점 등록하겠습니까?");
 				if(answer == true){
 					$('#movieScore').val(num);
@@ -24,9 +24,28 @@
 				
 	        	// 결과값 반영
 	        	//${scoreList.movieScore} = num;
-	        }
+	        } */
 	        
-	       
+	        function scoresChange(num) {
+	        	var answer = confirm("평점 등록하겠습니까?");
+				if(answer == true){
+					$('#movieScore').val(num); // 점수를  input에 설정
+					var formData = $('#movieScoreForm').serialize();
+					
+					$.ajax({
+			 			type:"post",
+			 			url:"/movie/insertMovieScore",
+			 			data:formData,
+			 			success:function(result){
+			 				alert("별점 등록했습니다");
+			 			},
+			 			error:function(){			 				
+			 				alert("전송 실패");
+			 			}		
+			 		}); 	// ajax 끝
+				}
+		
+	        }
 	        
         </script>
         
