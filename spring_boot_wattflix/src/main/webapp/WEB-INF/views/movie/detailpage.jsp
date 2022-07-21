@@ -20,6 +20,9 @@
     </head>
 
 <body>
+	<!-- top bar -->
+			<c:import url="/WEB-INF/views/layout/top.jsp" />
+
     <!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
@@ -58,7 +61,8 @@
 					<p>
 					
 					</div>
-                    
+                    <br>
+                    <a href="<c:url value='/mymovie/insertLike/${movie.movieNo}'/>">마이무비 추가</a>
                     
                 </div>
             </div>
