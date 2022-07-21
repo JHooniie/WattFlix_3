@@ -15,7 +15,21 @@ public class MemberVO {
 	private String memAddress1;
 	private String memAddress2;
 	private String memGenre;
+	private String memPic;
+	private String memMessage;
 	
+	public String getMemPic() {
+		return memPic;
+	}
+	public void setMemPic(String memPic) {
+		this.memPic = memPic;
+	}
+	public String getMemMessage() {
+		return memMessage;
+	}
+	public void setMemMessage(String memMessage) {
+		this.memMessage = memMessage;
+	}
 	public String getMemId() {
 		return memId;
 	}

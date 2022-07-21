@@ -50,5 +50,22 @@
  	</select>
  
 
-  
+	<select id="movieSearch" parameterType="hashmap" resultMap="movieResult">
+  		SELECT * FROM movie WHERE
+  		<choose>
+  			<when test="type != null and type.equals('movieTitle')">
+  				movieTitle LIKE CONCAT('%', #{keyword}, '%')
+  			</when>
+  			<when test="type != null and type.equals('movieGenre')">
+  				movieGenre LIKE CONCAT('%', #{keyword}, '%')
+  			</when>
+  			<when test="type != null and type.equals('movieDirector')">
+  				movieDirector LIKE CONCAT('%', #{keyword}, '%')
+  			</when>
+  			<when test="type != null and type.equals('movieActor')">
+  				movieActor LIKE CONCAT('%', #{keyword}, '%')
+  			</when>
+  		</choose>
+  	</select>
+
   </mapper>

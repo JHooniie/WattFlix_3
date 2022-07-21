@@ -1,5 +1,6 @@
 package com.spring_boot_wattflix.project.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,29 @@ public class MemberService implements IMemberService {
 	public String loginCheck(HashMap<String, Object> map) {
 		return dao.loginCheck(map);
 	}
+
+	//업데이트
+	@Override
+	public void memberUpdate(MemberVO memVo) {
+		dao.memberUpdate(memVo);
+	}
+
+	@Override
+	public ArrayList<MemberVO> memberList(String memId) {
+		return dao.memberList(memId);
+	}
+	
+	@Override
+	public void profileUpdate(MemberVO memVo) {
+		dao.profileUpdate(memVo);
+		
+	}
+
+	@Override
+	public MemberVO profileView(String memId) {
+		return dao.profileView(memId);
+	}
+
+		
 
 }

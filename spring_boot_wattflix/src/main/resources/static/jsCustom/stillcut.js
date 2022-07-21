@@ -30,4 +30,13 @@ $(document).ready(function() {
 	Math.floor(Math.random()*5);
 	moveSlide(randomNumber);
 	
+	// 별점
+	$('#star a').click(function(){ 
+	 $(this).parent().children("a").removeClass("on");    
+	 $(this).addClass("on").prevAll("a").addClass("on");
+	 console.log($(this).attr("value"));
+ 	});
+ 
+	
 });
+

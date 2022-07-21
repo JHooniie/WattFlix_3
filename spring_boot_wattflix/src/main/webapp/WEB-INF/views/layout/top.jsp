@@ -10,11 +10,17 @@
 		
 		<link rel="stylesheet" href="<c:url value='/css/common.css'/>">
 		<link rel="stylesheet" href="<c:url value='/css/index.css'/>">
-		<script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="<c:url value='/css/main.css'/>">
+		<link rel="stylesheet" href="<c:url value='/css/movierank.css'/>">
+		<link rel="icon" href="<c:url value='/image/favicon.ico'/>" type="image/x-icon" sizes="16x16">
+	    <link rel="stylesheet" href="<c:url value='/css/posterbook.css'/>">
 
+		<script src="<c:url value='https://kit.fontawesome.com/50d21a2bed.js'/>" crossorigin="anonymous"></script>
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/jsCustom/index.js'/>"></script>
+		<script src="<c:url value='/jsCustom/main.js'/>"></script>
+		<script src="<c:url value='/jsCustom/movierank.js'/>"></script>
+	    <script src="<c:url value='/jsCustom/posterbook.js'/>"></script>
 
 	</head>
 	<body>
@@ -42,11 +48,17 @@
 									<button class="greenBtn" type="submit" style="width:200px;">
 										<span>Login</span>
 									</button><br>
-									<a href="<c:url value="/member/signupFormView"/>">
-										<button class="whiteBtn" style="width:200px;">
+									
+									
+										<!-- 충돌 시 이 부분으로 할 것!!!!! -->
+										<a href="<c:url value="/member/signupFormView"/>"><input type="button" class="whiteBtn" value="Sign up"></a>
+										<!-- <button class="whiteBtn" style="width:200px;">
 											<span>Sign up</span>
-										</button>
-									</a>
+										</button> -->
+									
+										
+									
+									
 								</form>
 							</div>
 
@@ -54,8 +66,8 @@
 					
 						<!-- 로그인 성공한 경우 보여줄 메뉴 항목 -->
 						<c:if test="${not empty sessionScope.sid }">
-							${sessionScope.sid } 님 환영합니다 :)    
-						  	<a href="<c:url value='member/update'/>"> 회원정보 수정</a>
+							<a href="<c:url value='/member/mypage2'/>">${sessionScope.sid }</a> 님 환영합니다 :)    
+						  	<a href="<c:url value='/member/updateForm'/>"> 회원정보 수정</a>
 							<a href="<c:url value='/logout'/>"> 로그아웃</a>
 						</c:if>
 		</header>

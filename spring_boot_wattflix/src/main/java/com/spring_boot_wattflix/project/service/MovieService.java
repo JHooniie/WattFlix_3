@@ -1,6 +1,7 @@
 package com.spring_boot_wattflix.project.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -34,5 +35,12 @@ public class MovieService implements IMovieService {
 	public ArrayList<MovieVO> actionMovieList() {
 		return dao.actionMovieList();
 	}
+  
+  @Override
+	public ArrayList<MovieVO> movieSearch(HashMap<String, Object> map) {
+		return dao.movieSearch(map);
+	}
+
+
 
 }
