@@ -1,3 +1,4 @@
+
 package com.spring_boot_wattflix.project.controller;
 
 import java.util.ArrayList;
@@ -101,7 +102,7 @@ public class MyMovieController {
 		vo.setMovieNo(movieNo);
 		String msg="";
 		
-		//System.out.println(memId);
+		System.out.println(memId);
 		
 		// 동일 영화 존재 여부 확인
 		int count = service.checkMymovie(vo.getMovieNo(), memId);
@@ -138,3 +139,4 @@ public class MyMovieController {
 	}
 	
 }
+

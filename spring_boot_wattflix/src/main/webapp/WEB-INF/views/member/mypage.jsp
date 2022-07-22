@@ -43,36 +43,49 @@
 						<div class="profile">
 
 							<!-- 프로필 사진 -->
-							<div id=profile>
-								<figure class="profile_img">
-									<img id="profile_img" src="../image/profile_imgae.png">
-								</figure>
-							</div>
-
-							<div class="card-body">
-								<h5 class="card-title">○○님, 안녕하세요!</h5>
-								<hr>
-								<p class="card-text">등록된 프로필이 없습니다.</p>
-								<button type="submit" class="btn btn-dark" id="profile_button">프로필
-									편집하기</button>
-							</div>
-
+						<div id=profile>
+							<figure class="profile_img">
+							<form id="fileUploadForm" method="post" action="<c:url value='/fileUpload'/>" enctype="multipart/form-data">
+								<c:set var="memPic" value="${memPf.memPic}"/>
+								<c:choose>
+									<c:when test="${memPic eq 'profile_image.png' }">
+										<img src="<c:url value='/images/profile_image.png'/>" id="profile_img" >
+									</c:when>
+									<c:when test="${memPic ne 'profile_image.png' }">
+										<img src="<c:url value='/images/${memPic}'/>" id="profile_img">
+									</c:when>
+								</c:choose>
+								
+								<!-- 파일 : <input type="file" id="uploadFile" name="uploadFile">
+								<input type="submit" value="업로드"> -->
+							</form>
+							</figure>
 						</div>
+
+						<div class="card-body">
+							<h5 class="card-title">${sessionScope.sid }님, 안녕하세요!</h5>
+							<hr>
+							<p class="card-text">등록된 프로필이 없습니다.</p>
+							<button type="submit" class="btn btn-dark" id="profile_button">프로필
+								편집하기</button>
+						</div>
+
+					</div>
 
 						<div class="profile_box">
 
 							<div id="profile_box_a">
-								<a href="<c:url value='/movie/posterView'/>" class="a_item">
-									<span class="link-text">관심 영화</span> <i
-									class="fa-regular fa-heart fa-lg"></i>
-								</a>
-
-						<div id="profile_box_a">
-							<a href="<c:url value='/movie/myPageMovieList'/>" class="a_item">  
-							<span class="link-text">평가한 영화</span>
-							<i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-							</a>
-						</div>
+		                        <a href="<c:url value='/mymovie/mymovieView'/>" class="a_item">
+		                           <span class="link-text">관심 영화</span> <i
+		                           class="fa-regular fa-heart fa-lg"></i>
+		                        </a>
+							</div>
+							<div id="profile_box_a">  
+		                        <a href="<c:url value='/movie/myPageMovieList'/>" class="a_item">
+		                        <span class="link-text">평가한 영화</span>
+		                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+		                        </a>
+		                     </div>
 
 
 						</div>

@@ -66,10 +66,6 @@ public class WattflixController {
 	}
 
 	
-	  @RequestMapping("/member/mypageView") public String mypageView() { 
-		  return "member/mypage2"; 
-	}
-	 
 
 	@RequestMapping("/member/signdownView")
 	public String signdownView() {
@@ -87,5 +83,6 @@ public class WattflixController {
 	public String loginFormView() {
 		return "member/login";
 	}
-
 }
+	
+

@@ -29,9 +29,8 @@
         <p id="roundTitle">최애 영화를 골라주세요!</p>
       </header>
       <div class="content default" id="content">
-        <button id="btnGameStart" onclick="start()">회원용</button>
+        <button class="greenBtn" id="btnGameStart" onclick="start()">시작!</button>
         <!-- 로그인 확인 -> O -> 게임 시작  -> X면 로그인 창 -->
-        <button id="btnGameStart" onclick="//회원가입창//">비회원용</button>
         <!-- 회원가입 -->
       </div>
       <footer class="footer soff" id="footer">
@@ -63,3 +62,5 @@
       
     
 </html>
+
+

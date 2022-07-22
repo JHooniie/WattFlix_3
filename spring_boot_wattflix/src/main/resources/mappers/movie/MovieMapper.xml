@@ -73,6 +73,9 @@
 	<select id="movieSearch" parameterType="hashmap" resultMap="movieResult">
   		SELECT * FROM movie WHERE
   		<choose>
+  			<when test="type != null and type.equals('movieNo')">
+  				movieNo LIKE CONCAT('%', #{keyword}, '%') 
+  			</when>
   			<when test="type != null and type.equals('movieTitle')">
   				movieTitle LIKE CONCAT('%', #{keyword}, '%')
   			</when>
