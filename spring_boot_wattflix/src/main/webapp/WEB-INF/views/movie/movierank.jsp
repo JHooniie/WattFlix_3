@@ -17,22 +17,29 @@
 <body>
 	<!-- top bar -->
 	<c:import url="/WEB-INF/views/layout/top.jsp" />
-	
+
 	<!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
-	<main id="movierank-main">
+	<main id="movierank_main">
+
+		<br> <br>
+
 		<div class="movierank">
+
 
 			<div id="content">
 
-				<div id="box" style="text-align:center;">
-					박스 오피스 순위<br>
+				<div id="box" style="text-align: center;">
+					<h3>박스 오피스 순위 &#128302;</h3>
+					<br>
+					<hr>
+					<br>
 				</div>
 
 				<input type="date" id="date">
 
-				<button id="mybtn">확인</button>
+				<button class="whiteBtn" id="mybtn">확인</button>
 			</div>
 
 			<div>
@@ -41,6 +48,10 @@
 
 			</div>
 		</div>
+
+		</div>
+
+		<br> <br>
 
 	</main>
 
