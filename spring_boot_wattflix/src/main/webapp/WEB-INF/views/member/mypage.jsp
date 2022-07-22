@@ -49,10 +49,10 @@
 								<c:set var="memPic" value="${memPf.memPic}"/>
 								<c:choose>
 									<c:when test="${memPic eq 'profile_image.png' }">
-										<img src="<c:url value='/images/profile_image.png'/>" id="profile_img" >
+										<img src="<c:url value='/image/profile_image.png'/>" id="profile_img" >
 									</c:when>
 									<c:when test="${memPic ne 'profile_image.png' }">
-										<img src="<c:url value='/images/${memPic}'/>" id="profile_img">
+										<img src="<c:url value='/image/${memPic}'/>" id="profile_img">
 									</c:when>
 								</c:choose>
 								
