@@ -48,7 +48,7 @@ public class MyMovieController {
 				msg="이미 추가된 영화입니다.";
 			}
 			request.setAttribute("msg", msg);
-			request.setAttribute("url", "redirect:/mymovie/mymovieView");
+			request.setAttribute("url", "/mymovie/mymovieView");
 		}
 		
 		return "layout/alert";
@@ -101,7 +101,7 @@ public class MyMovieController {
 		vo.setMovieNo(movieNo);
 		String msg="";
 		
-		System.out.println(memId);
+		//System.out.println(memId);
 		
 		// 동일 영화 존재 여부 확인
 		int count = service.checkMymovie(vo.getMovieNo(), memId);
