@@ -33,7 +33,6 @@ body {
     background: linear-gradient( #212121, #0F0F0F);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 /* common */
 
@@ -109,6 +108,10 @@ input, select {
 }
 
 /* ************** 로고 *************** */
+
+.icon-item {
+    z-index: 10;
+}
 
 .mainLogo_big {
     font-size: 60px;
