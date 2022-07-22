@@ -1,3 +1,4 @@
+
 window.onload = function() {
 
     document.getElementById('signup-form').onsubmit = function() {
@@ -70,5 +71,6 @@ window.onload = function() {
 
 
     };
+
 
 };
