@@ -16,7 +16,8 @@ public interface IMyMovieDAO {
 	public ArrayList<MyMovieVO> listAllMymovie(String memId);
 	
 	// 마이무비 삭제
-	public void deleteMymovie(HashMap<String, Object> map);
+//	public void deleteMymovie(HashMap<String, Object> map);
+	public void deleteMymovie(String movieNo);
 
 	public int checkMymovie(HashMap<String, Object> map);
 	

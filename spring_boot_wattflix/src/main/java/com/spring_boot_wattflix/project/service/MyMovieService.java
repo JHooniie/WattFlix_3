@@ -6,6 +6,7 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.spring_boot_wattflix.project.dao.IMyMovieDAO;
 import com.spring_boot_wattflix.project.model.MyMovieVO;
@@ -27,12 +28,18 @@ public class MyMovieService implements IMyMovieService {
 		return dao.listAllMymovie(memId);
 	}
 
+//	@Override
+//	public void deleteMymovie(String movieNo, String memId) {
+//		HashMap<String,Object> map = new HashMap<String,Object>();
+//		map.put("memId", memId);
+//		map.put("movieNo", movieNo);
+//		dao.deleteMymovie(map);
+//	}
+//	public void deleteMymovie(String movieNo, String memId) {
 	@Override
-	public void deleteMymovie(String movieNo, String memId) {
-		HashMap<String,Object> map = new HashMap<String,Object>();
-		map.put("memId", memId);
-		map.put("movieNo", movieNo);
-		dao.deleteMymovie(map);
+	public void deleteMymovie(String mymovieNo) {
+//		map.put("movieNo", movieNo);
+		dao.deleteMymovie(mymovieNo);
 	}
 
 

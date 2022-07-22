@@ -27,8 +27,8 @@
   	</insert>
   	
   	<!-- 삭제 -->
-  	<delete id="deleteMymovie" parameterType="hashMap">
-  		DELETE * FROM myMovie WHERE myMovieNo=#{myMovieNo}
+  	<delete id="deleteMymovie" parameterType="string">
+  		DELETE FROM myMovie WHERE myMovieNo=#{myMovieNo}
  	</delete>
  	
 

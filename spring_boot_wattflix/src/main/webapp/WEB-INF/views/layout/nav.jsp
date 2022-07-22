@@ -32,13 +32,16 @@
 				</div>
 				<br>
 				<div class="nav-menu">
-					<!-- comment -->
-					<div class="nav-contents">
-						<a href="<c:url value='/movie/todayMovieView'/>" class="nav-item">
-							<i class="fa-solid fa-star fa-lg"></i> <span class="link-text">Today's
-								Movie</span>
-						</a>
-					</div>
+					<!-- 로그인 성공한 경우 보여줄 메뉴 항목 -->
+					<c:if test="${not empty sessionScope.sid }">
+						<!-- comment -->
+						<div class="nav-contents">
+							<a href="<c:url value='/movie/todayMovieView'/>" class="nav-item">
+								<i class="fa-solid fa-star fa-lg"></i> <span class="link-text">Today's
+									Movie</span>
+							</a>
+						</div>
+					</c:if>
 
 					<!-- search -->
 					<div class="nav-contents">
@@ -56,13 +59,26 @@
 						</a>
 					</div>
 
-					<!-- my poster -->
-					<div class="nav-contents">
-						<a href="<c:url value='/mymovie/mymovieView'/>" class="nav-item">
-							<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">My
-								Movie</span>
-						</a>
-					</div>
+					<!-- 로그인 성공한 경우 보여줄 메뉴 항목 -->
+					<c:if test="${not empty sessionScope.sid }">
+						<!-- my poster -->
+						<div class="nav-contents">
+								<a href="<c:url value='/mymovie/mymovieView'/>" class="nav-item">
+									<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">My
+										Movie</span>
+								</a>
+						</div>
+					</c:if>
+					<!-- 로그인 성공한 경우 보여줄 메뉴 항목 -->
+					<c:if test="${empty sessionScope.sid }">
+						<!-- my poster -->
+						<div class="nav-contents">
+								<a href="<c:url value='/member/loginRequestView'/>" class="nav-item">
+									<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">My
+										Movie</span>
+								</a>
+						</div>
+					</c:if>
 
 					<!-- gruop -->
 					<div class="nav-contents">

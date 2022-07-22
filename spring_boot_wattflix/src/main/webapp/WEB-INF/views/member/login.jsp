@@ -1,15 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WatFlix</title>
-        <link rel="stylesheet" href="<c:url value='css/introduce.css'/>">
-        <style>
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="<c:url value='/css/main.css'/>">
+<link rel="stylesheet" href="<c:url value='/css/mypage.css'/>">
+
+<style>
             button {
                 background:orange;
                 margin: 3px;
@@ -39,11 +44,11 @@
 		        	<p class="page_info">
 		        	<br>
 		        	<br>
-			        <h1>회원가입이 완료되었습니다!</h1>
+			        <h1>로그인이 필요한 기능입니다.</h1>
 			        <br>
                 </div>
-                	<a href="<c:url value='/'/>">
-              	     	<input type="button" class="greenBtn" value="영화 찾으러가기">
+                	<a href="<c:url value='/member/signupFormView'/>">
+              	     	<input type="button" class="greenBtn" value="회원가입 하러가기">
                    	</a>
 		    	</div>
         </main>

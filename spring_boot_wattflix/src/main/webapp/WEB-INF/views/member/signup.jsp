@@ -3,14 +3,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <link rel="stylesheet" href="<c:url value='/css/signup.css'/>">
-<script src="<c:url value='/jsCustom/signup.js'/>"></script>
 <script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script src="<c:url value='/js/searchZip.js'/>"></script>
+<script src="<c:url value='/jsCustom/signup.js'/>"></script>
 
 <body>
-	<!-- top bar -->
-	<c:import url="/WEB-INF/views/layout/top.jsp" />
+	<div style="display:none;">
+		<c:import url="/WEB-INF/views/layout/top.jsp" />
+	</div>
 
 	<!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
@@ -21,7 +22,7 @@
 			<div class="signup-banner">
 				<!-- logo -->
 				<h1 class="mainLogo">
-					<a href="../index.html"><span
+					<a href="<c:url value='/'/>"><span
 						style="font-family: PyeongChangPeace-Bold;">WattFlix</span></a>
 				</h1>
 				<!-- logo end -->
@@ -40,12 +41,11 @@
 				</div>
 				<br>
 				<div class="title">
-					<span class="small-text">⏤ 또는 ⏤</span><br> <br> <span
-						style="font-weight: 700;">이메일로 가입하기</span>
+					<span class="small-text">⏤ 또는 ⏤</span><br> <br>
+					<span style="font-weight: 700;">이메일로 가입하기</span>
 				</div>
 				<br>
-				<form id="signup-form" name="signup-form" method="post"
-					action="<c:url value='/member/signUp'/>">
+				<form id="signup-form" name="signup-form" method="post" action="<c:url value='/member/signUp'/>">
 					<div id="signup-content">
 						<!-- MAIL -->
 						<label for="userId">이메일</label> <input class="signup-input"
@@ -138,14 +138,15 @@
 							<input class="signup-input" type="text" id="memHpCheck"
 								name="memHpCheck" placeholder="인증번호 입력하세요.">
 						</div>
-						<br> <label>주소</label> <input class="signup-input"
+						<br> <label>주소</label><br>
+						<input class="signup-input"
 							type="text" id="memZipcode" name="memZipcode"
 							style="width:295px; display:inline-block;"
 							placeholder="우편번호"
 							readonly> <input class="whiteBtn" type="button" id="searchZipBtn"
-							name="searchZipBtn" value="우편번호 찾기"><br> <input
+							name="searchZipBtn" value="우편번호 찾기" style="margin-bottom:5px;"><br> <input
 							class="signup-input" type="text" id="memAddress1"
-							name="memAddress1" placeholder="주소 입력" readonly> <input
+							name="memAddress1" placeholder="주소 입력" style="margin-bottom:5px;" readonly> <input
 							class="signup-input" type="text" id="memAddress2"
 							name="memAddress2" placeholder="상세 주소 입력"> <label>관심
 							분야</label>

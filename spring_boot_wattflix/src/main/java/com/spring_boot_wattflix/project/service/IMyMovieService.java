@@ -17,6 +17,8 @@ public interface IMyMovieService {
 	ArrayList<MyMovieVO> listAllMymovie(String memId);
 	
 	// 마이무비 삭제
-	public void deleteMymovie(String movieNo, String memId);
+//	public void deleteMymovie(String movieNo, String memId);
+//	public void deleteMymovie(String mymovieNo);
+	void deleteMymovie(String mymovieNo);
 
 }
