@@ -1,45 +1,39 @@
-/* @import
-	url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css')
-	; */
+#movierank_main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-
-/* #box {
+#movierankbox {
 	color: #D7E1E1;
 	font-size: 25pt;
 	text-align: center;
 	margin-top: 10px;
-	margin-bottom: 20px;
-} */
+	margin-bottom: 10px;
+}
 
 #boxoffice {
 	color: #D7E1E1;
-	font-size: 15pt;
+	font-size: 12pt;
 	text-align: left;
+	padding-top: 10px;
 }
 
 #mybtn {
-	padding: 8px;
 	border-radius: 20px;
-	width: 50px;
-	/* 	border-top: none;
-	border-left: none;
-	border-right: none;
-	align-items: center; */
 	margin: auto;
-	margin-top: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 	display: block;
 }
 
 #date {
 	padding: 8px;
 	border-radius: 20px;
-	width: 100px;
-	border-top: none;
-	border-left: none;
-	border-right: none;
+	width: 200px;
 	border-bottom: 3px solid black;
 	margin: auto;
-	display: block;
+	text-align: center;
 }
 
 .movierank {
@@ -51,10 +45,3 @@
 	border-style: solid;
 	border-color: #3c3c3c;
 }
-
-/* main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-} */

@@ -14,7 +14,6 @@ main div {
 #signup-header {
     height: auto;
     /* border: blue solid 1px; */
-    padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -24,11 +23,8 @@ main div {
     display: flex;
     flex-direction:column;
     justify-content:center;
-    /* background-color: #1e1e1e; */
-    /* border: solid 1px #3c3c3c; */
     padding: 20px;
     position: relative;
-    height: 100%;
 }
 
 #signup-content {

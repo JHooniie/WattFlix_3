@@ -117,7 +117,9 @@
                     
 
                     <br>
-                    <a href="<c:url value='/mymovie/insertLike/${movie.movieNo}'/>">마이무비 추가</a>
+                    <a href="<c:url value='/mymovie/insertLike/${movie.movieNo}'/>">
+                    	<input class="greenBtn" type="button" value="My Movie 추가">
+                   	</a>
 
                     
                 </div>

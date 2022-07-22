@@ -23,30 +23,35 @@ public class MyMovieController {
 	public String insertLike(@PathVariable String movieNo,
 							HttpSession session,
 							HttpServletRequest request,
-							MyMovieVO vo,
-							Model model) {
+							MyMovieVO vo) {
 		// 로그인 세션 가져오기
 		String memId = (String)session.getAttribute("sid");
 		vo.setMemId(memId);
 		vo.setMovieNo(movieNo);
-		String msg="";
-		
 		System.out.println(memId);
 		
-		// 동일 영화 존재 여부 확인
-		int count = service.checkMymovie(vo.getMovieNo(), memId);
-		if (count == 0) {
-			service.insertLike(vo);
-			msg="My Movie에 추가되었습니다.";
+		String msg="";
+		String url="";
+		
+		if (memId == null) {
+			request.setAttribute("msg", "로그인이 필요합니다.");
+			request.setAttribute("url", "/");
+			return "alert";
 		} else {
-			// 추가되지 않고, 이미 추가된 영화임을 알려주기
-			msg="이미 추가된 영화입니다.";
+			// 동일 영화 존재 여부 확인
+			int count = service.checkMymovie(vo.getMovieNo(), memId);
+			if (count == 0) {
+				service.insertLike(vo);
+				msg="My Movie에 추가되었습니다.";
+			} else {
+				// 추가되지 않고, 이미 추가된 영화임을 알려주기
+				msg="이미 추가된 영화입니다.";
+			}
+			request.setAttribute("msg", msg);
+			request.setAttribute("url", "redirect:/mymovie/mymovieView");
 		}
-		model.addAttribute("msg", msg);
-//		return "redirect:/movie/detailMovie/{movieNo}";
-		return "redirect:" + request.getHeader("Referer");
-
-
+		
+		return "layout/alert";
 	}
 	
 	@RequestMapping("/mymovie/insertDislike/{movieNo}")
@@ -67,7 +72,7 @@ public class MyMovieController {
 		int count = service.checkMymovie(vo.getMovieNo(), memId);
 		if (count == 0) {
 			service.insertDislike(vo);
-			msg="해당 영화를 더이상 추천하지 않습니다.";
+			msg="해당 영화를 더 이상 추천하지 않습니다.";
 		} else {
 			// 추가되지 않고, 이미 추가된 영화임을 알려주기
 //			msg="이미 추가된 영화입니다.";
@@ -77,13 +82,22 @@ public class MyMovieController {
 	}
 	
 	// mymovie 리스트 뷰
-	@RequestMapping("/movie/mymovieView")
+	@RequestMapping("/mymovie/mymovieView")
 	public String listAllMymovie(HttpSession session, Model model) {
 		String memId = (String)session.getAttribute("sid");
 		ArrayList<MyMovieVO> myMovieList = service.listAllMymovie(memId);
 		
 		model.addAttribute("myMovieList", myMovieList);
 		return "movie/mymovie";
+	}
+	
+	// mymovie 제거
+	@RequestMapping("/mymovie/deleteMymovie/{movieNo}")
+	public String deleteMymovie(@PathVariable String movieNo, HttpSession session) {
+		String memId = (String)session.getAttribute("sid");
+		service.deleteMymovie(movieNo, memId);
+		
+		return "redirect:/mymovie/mymovieView";
 	}
 	
 }

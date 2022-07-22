@@ -6,6 +6,60 @@ a {
 }
 
 /*  */
+/* TOP */
+/*  */
+#top-wrap {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	/* border: red 1px solid; */
+	display: flex;
+	z-index: 5;
+	z-index: 10;
+	flex-direction: row;
+	justify-content: flex-end;
+	background: rgb(23, 23, 23);
+	background: linear-gradient(180deg, rgba(23, 23, 23, 1) 0%,
+		rgba(23, 23, 23, 0) 65%);
+}
+
+.top-contents-btn {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 12px 24px;
+	border: 0;
+	color: #3a4149;
+	background: #e7ebee;
+	line-height: 1.15;
+	font-size: 16px; : hover { transition : all .1s ease;
+	box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+}
+.top-member {
+	flex-direction: row;
+	justify-content: center;
+	width: 300px;
+	margin-top: 20px;
+}
+
+.top-contents {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-right: 20px;
+}
+
+#top-contents-login {
+	margin-top: 20px;
+	margin-right: 50px;
+}
+
+/*  */
 /* nav */
 /*  */
 .nav-menu-icon {
@@ -37,6 +91,7 @@ a {
 	position: fixed;
 	left: -500px;
 	transition: all 0.5s ease;
+	z-index: 10;
 }
 
 #nav-tab.open {
@@ -59,7 +114,7 @@ nav {
 	opacity: 0.8;
 	height: 100%;
 	position: fixed;
-	z-index: 6;
+	z-index: 10;
 }
 
 .nav-icon {
@@ -190,58 +245,3 @@ nav {
 	margin: 5px;
 	appearance: none;
 }
-
-
-/*  */
-/* TOP */
-/*  */
-#top-wrap {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 80px;
-	/* border: red 1px solid; */
-	display: flex;
-	z-index: 1;
-	flex-direction: row;
-	justify-content: flex-end;
-	background: rgb(23, 23, 23);
-	background: linear-gradient(180deg, rgba(23, 23, 23, 1) 0%,
-		rgba(23, 23, 23, 0) 65%);
-}
-
-.top-contents-btn {
-	display: inline-block;
-	outline: none;
-	cursor: pointer;
-	font-weight: 600;
-	border-radius: 3px;
-	padding: 12px 24px;
-	border: 0;
-	color: #3a4149;
-	background: #e7ebee;
-	line-height: 1.15;
-	font-size: 16px; : hover { transition : all .1s ease;
-	box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
-}
-
-}
-.top-member {
-	flex-direction: row;
-	justify-content: center;
-	width: 300px;
-	margin-top: 20px;
-}
-
-.top-contents {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	margin-right: 20px;
-}
-
-#top-contents-login {
-	margin-top: 20px;
-	margin-right: 50px;
-}
-

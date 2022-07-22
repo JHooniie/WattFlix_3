@@ -35,18 +35,13 @@ public class MyMovieService implements IMyMovieService {
 		dao.deleteMymovie(map);
 	}
 
-//	public int checkMymovie(MyMovieVO vo) {
-//		HashMap<String,Object> map = new HashMap<String,Object>();
-//		map.put("memId", memId);
-//		map.put("movieNo", movieNo);
-//		return dao.checkMymovie(vo);
-//	}
 
 	@Override
 	public void insertDislike(MyMovieVO vo) {
 		dao.insertDislike(vo);
 	}
 
+	@Override
 	public int checkMymovie(String movieNo, String memId) {
 		HashMap<String,Object> map = new HashMap<String,Object>();
 		map.put("memId", memId);
@@ -54,11 +49,6 @@ public class MyMovieService implements IMyMovieService {
 		return dao.checkMymovie(map);
 	}
 
-//	@Override
-//	public int checkMymovie(MyMovieVO vo) {
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
 
 
 

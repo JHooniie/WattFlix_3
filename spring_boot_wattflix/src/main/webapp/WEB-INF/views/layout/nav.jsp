@@ -29,9 +29,6 @@
 						class="mainLogo">WattFlix</span>
 					</a>
 
-					<!-- 					<div class="nav-menu-icon-x" id="nav-menu-icon-x">
-						<i class="fa-solid fa-xmark fa-lg"></i>
-					</div> -->
 				</div>
 				<br>
 				<div class="nav-menu">
@@ -61,7 +58,7 @@
 
 					<!-- my poster -->
 					<div class="nav-contents">
-						<a href="<c:url value='/movie/mymovieView'/>" class="nav-item">
+						<a href="<c:url value='/mymovie/mymovieView'/>" class="nav-item">
 							<i class="fa-solid fa-image fa-lg"></i> <span class="link-text">My
 								Movie</span>
 						</a>
