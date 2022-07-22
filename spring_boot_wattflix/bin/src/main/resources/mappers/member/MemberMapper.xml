@@ -24,11 +24,11 @@
 	</delete>
     <!-- 회원 정보 수정 -->
   
-     <update id="memberUpdate" parameterType="com.spring_boot_wattflix.project.model.MemberVO">
+<!--      <update id="memberUpdate" parameterType="com.spring_boot_wattflix.project.model.MemberVO">
   	UPDATE member
   	SET memPwd=#{memPwd}, memNickname=#{memNickname}
   	WHERE memId=#{memId}
-  </update>
+  </update>  -->
   
   <!-- 프로필 정보 받기 -->
   <select id="profileView" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MemberVO">

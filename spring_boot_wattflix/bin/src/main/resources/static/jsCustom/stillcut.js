@@ -31,7 +31,7 @@ $(document).ready(function() {
 	moveSlide(randomNumber);
 	
 	// 별점
-	$('#star a').click(function(){ 
+	$('#star a').hover(function(){ 
 	 $(this).parent().children("a").removeClass("on");    
 	 $(this).addClass("on").prevAll("a").addClass("on");
 	 console.log($(this).attr("value"));

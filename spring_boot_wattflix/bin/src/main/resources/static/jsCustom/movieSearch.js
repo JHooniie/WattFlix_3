@@ -15,7 +15,7 @@
  		
  		$.ajax({
  			type:"post",
- 			url:"movieSearchResult", 
+ 			url:"/movie/movieSearchResult", 
  			data:formData,
  			success:function(result){ 
  			// 반환된 결과를 searchResultBox <div>에 삽입

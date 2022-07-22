@@ -1,8 +1,4 @@
-/**
- * 
- */
- 
- if(!window['vsgame']) {
+if(!window['vsgame']) {
 	vsgame = {};
 	( function (_O) {
     _O.init = () => {

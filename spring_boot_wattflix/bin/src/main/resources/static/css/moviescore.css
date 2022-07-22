@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+
+div {
+	border-radius: 10px;
+}
+
+#wrap {
+	width: 840px; 
+	margin : 0 auto;
+	border-radius: 10px;
+	background-color: #3c3c3c;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	/*  */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* .test {
+	margin: 0 auto;
+} */
+
+.title {
+	/* margin-left: 300px; */
+	text-align:center;
+}
+
+#wrap div {
+	/* border: red 1px solid; */
+}
+
+#titleBox {
+	/* border: blue 1px solid; */
+	height:50px;
+	color:black;
+}
+
+#posterBox {
+	/* border: green 1px solid; */
+}
+
+#starBox {
+	/* border: red 1px solid; */
+	margin:5px;
+}
+
+.score-box {
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+	/* padding: 10px; */
+	background-color: #808080;
+	width: 200px;
+	height: 300px;
+}
+
+#imgPoster {
+	border-radius: 15px;
+	width: 150px;
+	height: 200px;
+}
+
+#star {
+	font-size: 1.5rem;
+	color: #DAA520;
+}
+
+#titleBox * {
+	font-weight:600;
+	color:#383b40;
+	line-height:50px; /* 제목 긴 영화는 옆으로 짤림 */
+}
+
+
