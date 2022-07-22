@@ -21,7 +21,7 @@
 	<!-- navbar -->
 	<c:import url="/WEB-INF/views/layout/nav.jsp" />
 
-	<main>
+	<main id="movierank-main">
 		<div class="movierank">
 
 			<div id="content">
