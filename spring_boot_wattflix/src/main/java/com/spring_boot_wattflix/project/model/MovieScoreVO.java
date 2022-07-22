@@ -10,8 +10,15 @@ public class MovieScoreVO {
 	// Mapper에서 받아서 View에 출력할 때 사용할 필드
 	private String moviePoster;
 	private String movieTitle;
+	private String memNickname;
 	
 	
+	public String getMemNickname() {
+		return memNickname;
+	}
+	public void setMemNickname(String memNickname) {
+		this.memNickname = memNickname;
+	}
 	public int getScoreNo() {
 		return scoreNo;
 	}

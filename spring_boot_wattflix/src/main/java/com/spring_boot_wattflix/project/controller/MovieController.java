@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.spring_boot_wattflix.project.model.MovieScoreVO;
 import com.spring_boot_wattflix.project.model.MovieVO;
 import com.spring_boot_wattflix.project.service.MovieService;
 
@@ -21,6 +22,7 @@ public class MovieController {
 	// DI 설정
 	@Autowired
 	MovieService movieService;
+	
 
 	@RequestMapping("/movie/movieSearch")
 	public String viewmovieSearch() {
@@ -135,7 +137,16 @@ public class MovieController {
 	 */
 	
 
-
+	// 마이페이지에서 '평가한영화'버튼 눌렀을 때 조회
+    @RequestMapping("/movie/myPageMovieList")
+    public String myPageMovieList(HttpSession session, Model model) {
+       String memId = (String) session.getAttribute("sid");
+       
+       ArrayList<MovieScoreVO> scoreList = movieService.getMovieScoreInfo(memId);
+       model.addAttribute("scoreList", scoreList);
+       
+       return "movie/myPageMovieListView";
+    }
 
 
 	/*
