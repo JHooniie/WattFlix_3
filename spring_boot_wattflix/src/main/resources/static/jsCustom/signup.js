@@ -1,28 +1,40 @@
 window.onload = function() {
 
     document.getElementById('signup-form').onsubmit = function() {
-        var name = document.getElementById('name');
-		
-		if(name.value == "") {
-			alert("성명을 입력하세요");
-			name.focus();
+        var memId = document.getElementById('memId');
+        var memIdCheck = document.getElementById('memIdCheck');
+        var password = document.getElementById('password2');
+        var passwordCheck = document.getElementById('passwordCheck');
+        
+//		이메일 체크
+		if(memId.value == "") {
+			alert("이메일을 입력하세요");
+			memId.focus();
 			
 			return false; // 다음 페이지로 이동하지 않게
+		} else {
+			if (memId.indexOf("@") == -1 || memId.indexOf(".") == -1) {
+				alert("이메일 형식이 아닙니다.");
+				return false;
+			} else if (memId.indexOf("@") >  memId.indexOf(".")) {
+				alert("이메일 형식이 아닙니다.");
+				return false;
+			} else { }
 		}
 
-        if(name.value.length < 2) {
-            alert("이름은 2자 이상이어야 합니다");
-            name.focus();
-            name.value="";
-
-            return false;
+//		이메일 
+        if(memIdCheck.value == "") {
+			alert("이메일 확인을 입력하세요");
+			memIdCheck.focus();
+			return false; // 다음 페이지로 이동하지 않게
+		}
+        if(memIdCheck.value != memId.value) {
+        	alert("이메일 확인 내용이 이메일과 같아야 합니다.");
+        	memIdCheck.focus();
+        	return false; // 다음 페이지로 이동하지 않게
         }
-
-        var password2 = document.getElementById('password2');
-		var passwordCheck = document.getElementById('passwordCheck');
-
         
-
+//        비밀번호체크
         if(password2.value == "") {
 			alert("비밀번호를 입력하세요");
 			password2.focus();

@@ -80,5 +80,11 @@ public class WattflixController {
 	public String introduceView() {
 		return "company/introduce";
 	}
+	
+//	로그인
+	@RequestMapping("/member/loginRequestView")
+	public String loginFormView() {
+		return "member/login";
+	}
 
 }
