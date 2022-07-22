@@ -3,13 +3,18 @@ window.onload = function() {
 
 	 //var pattern3 = /[~!@#$%^&*()_+|<>?:{}]/; 
         var email = document.getElementById('memId');
+         var emailchk = document.getElementById('memIdCheck');
        var pw = document.getElementById("memPwd");
        var pwCheck = document.getElementById("memPwdCheck");
        var nickname = document.getElementById("memNickname");
-       var hp = document.getElementById("hp_nationalNum");
+       var hp = document.getElementById("memHp");
+       var year = document.getElementById('yyyy');
+       var month = document.getElementById('mm');
+       var day = document.getElementById('dd');
         var hpCheck = document.getElementById("memHpCheck");
         var address1 = document.getElementById("memAddress1");
         var address2 = document.getElementById("memAddress2");
+
       
       
       if(email.value==""){
@@ -39,6 +44,12 @@ window.onload = function() {
        nickname.focus();
        return false;
        }
+            if(year.value==""||month.value==""||day.value==""){
+      alert("생년월일을 입력해 주세요.");
+      year.focus();
+      return false;
+
+    }
        
         if(hp.value==""){
        alert("전화번호를 입력해 주세요");
@@ -46,9 +57,26 @@ window.onload = function() {
        return false;
        }
        
-      
+         if(hpCheck.value==""){
+       alert("인증번호를 입력해 주세요");
+       hpCheck.focus();
+       return false;
+       }
+       
+   if(address1.value==""){
+   alert("주소를 입력해 주세요");
+   address1.focus();
+   return false;
+}
+     
+        if(address2.value==""){
+   alert("상세주소를 입력해 주세요");
+   address2.focus();
+   return false;
+}
 
 
-    };
+
+};
 
 };
