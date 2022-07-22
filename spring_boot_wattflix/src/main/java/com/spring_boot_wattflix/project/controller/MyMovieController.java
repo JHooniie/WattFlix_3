@@ -48,7 +48,7 @@ public class MyMovieController {
 				msg="이미 추가된 영화입니다.";
 			}
 			request.setAttribute("msg", msg);
-			request.setAttribute("url", "redirect:/mymovie/mymovieView");
+			request.setAttribute("url", "/mymovie/mymovieView");
 		}
 		
 		return "layout/alert";
