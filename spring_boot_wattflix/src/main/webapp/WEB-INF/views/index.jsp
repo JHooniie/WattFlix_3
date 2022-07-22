@@ -16,7 +16,7 @@
 	<div class="contents">
 
 		<div class="contents-banner">
-			<span id="plain-text">Home</span>
+			<span id="plain-text">&#127968; Home</span>
 		</div>
 
 		<div class="contents-events">
@@ -50,7 +50,7 @@
 
 
 		<div class="contents-banner">
-			<span id="plain-text">WattFlix 인기 작품</span>
+			<span id="plain-text">&#127939;&#127995;&#8205;&#9792;&#65039; WattFlix 인기 작품</span>
 		</div>
 
 		<div class="contents-scroll" id="contents-scroll">
