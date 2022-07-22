@@ -139,14 +139,14 @@
 					</div>
 				</div>
 
-				<!-- <div class="rec-movie">
+				<div class="rec-movie">
 
 					<div class="rec-movie-box">
 						<h3>여름을 담아봤어요</h3>
 						<div class="rec-movie-contents"></div>
 					</div>
 
-				</div> -->
+				</div>
 
 
 				<br> <br> <br> <br> <br> <br>
