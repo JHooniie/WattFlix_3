@@ -99,19 +99,17 @@ public class MemberController {
 
 	}
 	// 회원 프로필
-	@RequestMapping("/member/mypage2")
+	@RequestMapping("/member/mypageView")
 	public String myprofile(HttpSession session, Model model) {
 		String memId = (String)session.getAttribute("sid");
 		//ArrayList<MemberVO> memberList = memService.memberList(memId);
 		MemberVO memPf = memService.profileView(memId);
 		
 		model.addAttribute("memPf", memPf);
-		return "member/mypage2";	
+		return "member/mypage";	
 	}
 	
-	
 
-	
 	
 	
 	

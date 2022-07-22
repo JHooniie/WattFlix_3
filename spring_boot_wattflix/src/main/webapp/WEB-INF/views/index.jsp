@@ -25,7 +25,9 @@
 			<div class="contents-event">
 
 				<figure class="event_img">
-					<img id="event_img" src="<c:url value='/image/event_movie_worldcup.png'/>">
+					<a href="<c:url value='/ent/gameView'/>">
+				    <img id="event_img" src="<c:url value='/image/event_movie_worldcup.png'/>">
+				    </a>
 				</figure>
 
 			</div>
@@ -33,7 +35,9 @@
 			<div class="contents-event">
 
 				<figure class="event_img">
-					<img id="event_img" src="<c:url value='/image/event_movie_moviebti.png'/>">
+				<a href="<c:url value='/ent/gameView'/>">
+   					 <img id="event_img" src="<c:url value='/image/event_movie_moviebti.png'/>"> 
+   				 </a>
 				</figure>
 
 			</div>
@@ -41,7 +45,9 @@
 			<div class="contents-event">
 
 				<figure class="event_img">
-					<img id="event_img" src="<c:url value='/image/event_movie_what.png'/>">
+					<a href="<c:url value='/ent/gameView'/>">
+	   					 <img id="event_img" src="<c:url value='/image/event_movie_what.png'/>"> 
+	   				 </a>
 				</figure>
 
 			</div>
