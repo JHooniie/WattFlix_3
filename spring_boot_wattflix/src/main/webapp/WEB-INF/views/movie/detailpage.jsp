@@ -44,8 +44,14 @@
 			 			}		
 			 		}); 	// ajax 끝
 				}
+				/* else {
+					 $('#star a').addClass("off");
+					 
+				} */
 		
 	        }
+	        
+	        
 	        
         </script>
         
@@ -89,7 +95,6 @@
                     <br>
                    
                    	<!-- 별점 -->
-                   	<!-- value="1"인 부분은 database에 넣은 실 때 값을 가져와 사용하시면 됩니다. -->
                    	<c:if test="${not empty sessionScope.sid }">
                     <div>
                     <P id="star">
