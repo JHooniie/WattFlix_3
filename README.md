@@ -23,8 +23,10 @@
 - 개발기간 및 인원
   - 1차 : 22. 6. 22 ~ 27 (프론트엔드)
   - 2차 : 22. 7. 18 ~ 22 (프론트엔드 + 백엔드)
-- 개발 인원 : 6명
-  
+
+- 개발 인원 : 6명<br>
+  (@ddowoogi, @ksh950609, @SaehimLee, @slowlyseo, @YR SHIN, @JHooniie)
+
 <br>
 
 ---
@@ -72,6 +74,10 @@
 - 로그인/회원가입/회원 정보 수정
 - 내가 매긴 별점, 코멘트 모아 보기 : 마이페이지에서 모아보기 기능
 - 박스오피스 순위 조회
+
+![WatFlix](readme_assets/WattFlix.gif)
+
+[영상 더보기](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c889c63e-4d0b-4edb-9b09-97a38f577261/WattFlix_-_Chrome_2022-07-31_23-49-54_YouTube.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220731T151819Z&X-Amz-Expires=86400&X-Amz-Signature=b57f00663d12d8b41ebf91e1dd5d0690ddfd60cbc7d05c3e14f5ced461d7e5d4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22WattFlix%2520-%2520Chrome%25202022-07-31%252023-49-54_YouTube.mp4%22&x-id=GetObject)
 
 <br>
 
