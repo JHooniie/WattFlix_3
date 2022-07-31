@@ -50,9 +50,32 @@
  	</select>
  
 
+	<!-- 평가한 영화 리스트에 추가 -->
+	<!-- <select id="insertMovieScore" parameterType="com.spring_boot_wattflix.project.model.MovieScoreVO">
+		INSERT INTO moviescores (memId, movieNo, movieScore)
+		VALUES(#{memId}, #{movieNo}, #{movieScore})
+	</select> -->
+	
+	<select id="insertMovieScore" parameterType="hashmap">
+		INSERT INTO moviescores (memId, movieNo, movieScore)
+		VALUES(#{memId}, #{movieNo}, #{movieScore})
+	</select>
+	
+	<!-- 평가한 영화 리스트 출력 -->
+	<select id="getMovieScoreInfo" parameterType="string" resultType="com.spring_boot_wattflix.project.model.MovieScoreVO">
+		SELECT m.movieTitle, m.moviePoster, ms.movieScore, ms.movieNo
+		FROM movie m, moviescores ms
+		WHERE m.movieNo = ms.movieNo AND ms.memId=#{memId}
+	</select>
+  
+  
+
 	<select id="movieSearch" parameterType="hashmap" resultMap="movieResult">
   		SELECT * FROM movie WHERE
   		<choose>
+  			<when test="type != null and type.equals('movieNo')">
+  				movieNo LIKE CONCAT('%', #{keyword}, '%') 
+  			</when>
   			<when test="type != null and type.equals('movieTitle')">
   				movieTitle LIKE CONCAT('%', #{keyword}, '%')
   			</when>
@@ -68,4 +91,5 @@
   		</choose>
   	</select>
 
-  </mapper>
+  </mapper> 
+

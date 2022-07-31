@@ -60,6 +60,7 @@
 
 #storyBox {
     margin-left: 130px;
+    margin-right: 130px;
 }
 
 
@@ -218,9 +219,12 @@
    font-size: 2rem;
    
   }
-  #star a.on{
-   color: gold;
-  }
+#star a.on {
+	color: #DAA520;
+}
+#star a.off {
+	color: grey;
+}
   
 
 
