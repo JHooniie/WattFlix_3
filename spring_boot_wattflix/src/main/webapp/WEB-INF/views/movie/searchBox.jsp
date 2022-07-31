@@ -64,7 +64,7 @@
 					<span id="plain-text">${sessionScope.sid }이 보고싶은 영화</span>
 					</c:if>
 					<c:if test="${empty sessionScope.sid }">
-					<span id="plain-text">왓플릭스님이 보고싶은 영화</span>
+					<span id="plain-text">WattFlix님이 보고싶은 영화</span>
 					</c:if>
 				</div>
 				<a href="<c:url value='/'/>" class="icon-item"> 
